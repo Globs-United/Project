@@ -1,0 +1,62 @@
+[gd_scene load_steps=7 format=3 uid="uid://d4h8ppy0mb78w"]
+
+[ext_resource type="Script" uid="uid://y0spjnqx4dj2" path="res://scripts/lightning_cloud.gd" id="1_vcdl5"]
+[ext_resource type="Texture2D" uid="uid://cw7jv13e5djli" path="res://grey.png" id="2_51kvq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vcdl5"]
+size = Vector2(14, 56.5)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_51kvq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_51kvq")
+}],
+"loop": true,
+"name": &"test",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_srwrl"]
+radius = 14.0
+height = 56.0
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_51kvq"]
+
+[node name="Lightning Cloud" type="StaticBody2D"]
+script = ExtResource("1_vcdl5")
+
+[node name="Lightning" type="Area2D" parent="."]
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lightning"]
+position = Vector2(0, 28.25)
+shape = SubResource("RectangleShape2D_vcdl5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Lightning"]
+position = Vector2(4.76837e-07, 28.2041)
+scale = Vector2(-0.105, 0.562428)
+sprite_frames = SubResource("SpriteFrames_51kvq")
+animation = &"test"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_srwrl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(9.53674e-07, -6.55651e-07)
+scale = Vector2(36, 22)
+texture = SubResource("PlaceholderTexture2D_51kvq")
+
+[node name="StrikeTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="RestTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+
+[connection signal="body_entered" from="Lightning" to="." method="_on_lightning_body_entered"]
+[connection signal="body_exited" from="Lightning" to="." method="_on_lightning_body_exited"]
+[connection signal="timeout" from="StrikeTimer" to="." method="_on_strike_timer_timeout"]
+[connection signal="timeout" from="RestTimer" to="." method="_on_rest_timer_timeout"]
