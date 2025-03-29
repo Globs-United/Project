@@ -17,6 +17,8 @@ func _ready():
 	
 	accelerationSpeed *= screen_size.y / 700;
 	maxSpeed *= screen_size.y / 700;
+	jumpTimeLimit *= screen_size.y / 700;
+	accelerationFromGravity *= screen_size.y / 700;
 
 func _process(delta):
 	velocity.x *= 0.9;
