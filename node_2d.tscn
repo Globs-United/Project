@@ -1,7 +1,23 @@
-[gd_scene format=3 uid="uid://c8cicg3xt0mk8"]
+[gd_scene load_steps=4 format=3 uid="uid://c8cicg3xt0mk8"]
+
+[ext_resource type="Script" uid="uid://c6gpld4isg7ew" path="res://player.gd" id="1_0e48y"]
+[ext_resource type="Texture2D" uid="uid://ccbim107j7xxo" path="res://2025_03_29_0iw_Kleki.png" id="2_epypp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0hol4"]
+size = Vector2(128, 128)
 
 [node name="Node2D" type="Node2D"]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-position = Vector2(319, 82)
-polygon = PackedVector2Array(67, 298, 183, 55, 482, 391, 276, 451)
+[node name="Player" type="Area2D" parent="."]
+position = Vector2(182, 538)
+script = ExtResource("1_0e48y")
+metadata/_edit_group_ = true
+
+[node name="202503290IwKleki" type="Sprite2D" parent="Player"]
+position = Vector2(1.46627e-05, 1.90735e-06)
+scale = Vector2(1.28, 1.28)
+texture = ExtResource("2_epypp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(2.28882e-05, 3.05176e-05)
+shape = SubResource("RectangleShape2D_0hol4")
