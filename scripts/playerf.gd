@@ -1,10 +1,10 @@
 extends CharacterBody2D
 
-@export var accelerationSpeed = 16;
-@export var maxSpeed = 400;
+@export var accelerationSpeed = 20;
+@export var maxSpeed = 500;
 @export var jumpTimeLimit = 150;
-@export var accelerationFromGravity = 10;
-@export var jumpStrength = 230;
+@export var accelerationFromGravity = 800;
+@export var jumpStrength = 250;
 
 var screen_size;
 var downNow = 1;
@@ -21,7 +21,7 @@ func _ready():
 	accelerationFromGravity *= screen_size.y / 700;
 
 func _process(delta):
-	velocity.x *= 0.9;
+	velocity.x *= 0.88;
 	if Input.is_action_pressed("moveRight"):
 		velocity.x += accelerationSpeed;
 	if Input.is_action_pressed("moveLeft"):
@@ -36,9 +36,9 @@ func _process(delta):
 		if(abs(velocity.y) < jumpStrength):
 			velocity.y = -jumpStrength * downNow;
 	
-	velocity.y += accelerationFromGravity * downNow;
+	velocity.y += accelerationFromGravity * downNow * delta;
 	
-	if velocity.length() > maxSpeed:
+	if velocity.length() > maxSpeed / delta:
 		velocity = velocity.normalized() * maxSpeed;
 	
 	position += velocity * delta;
