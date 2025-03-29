@@ -1,9 +1,9 @@
 [gd_scene load_steps=10 format=3 uid="uid://c8cicg3xt0mk8"]
 
-[ext_resource type="Script" uid="uid://c6gpld4isg7ew" path="res://player.gd" id="1_0e48y"]
+[ext_resource type="Script" uid="uid://c6gpld4isg7ew" path="res://scripts/playerf.gd" id="1_0e48y"]
 [ext_resource type="Texture2D" uid="uid://ccbim107j7xxo" path="res://sprites/2025_03_29_0iw_Kleki.png" id="2_q6r6c"]
 [ext_resource type="Script" uid="uid://caa25t2cwn6p6" path="res://bottom.gd" id="3_epypp"]
-[ext_resource type="Script" uid="uid://bo555vpjdrsej" path="res://wall.gd" id="4_q6r6c"]
+[ext_resource type="Script" uid="uid://bo555vpjdrsej" path="res://scripts/wall.gd" id="4_q6r6c"]
 [ext_resource type="Texture2D" uid="uid://cw7jv13e5djli" path="res://sprites/grey.png" id="5_kdubu"]
 
 [sub_resource type="Gradient" id="Gradient_epypp"]
