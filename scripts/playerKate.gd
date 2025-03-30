@@ -13,8 +13,6 @@ var jumpFrame = 0;
 # number of milliseconds player has to click jump after falling off of a platform
 # Helps counter lack of hitbox in tail and is generally more user friendly
 var jumpTimeMax = 250;
-
-	#prevents flying due to SPACE spam
 var playerstate = "idle"
 	#idle, walk, jump, death
 var death_lock = false
@@ -36,8 +34,9 @@ func _process(delta: float) -> void:
 	if Yworld != $AnimatedSprite2D.flip_v:
 		Yworld = !Yworld
 		change_world()
-	if health <= 0:
+	if health <= 0 && !death_lock:
 		death()
+		print("player died")
 	# Don't do any calculations / move player if already dead.
 	if death_lock:
 		playeranim(delta)
@@ -45,15 +44,17 @@ func _process(delta: float) -> void:
 	
 	# Add the gravity.  (+update is_in_air)
 	if not is_on_floor_custom:
-		velocity += get_gravity() * delta
-		#falling?
-		if velocity.y < 0:
+		velocity.y += gravity * delta
+		#double checks if jumping
+		if -1*sign(gravity) == sign(velocity.y):
 			playerstate = "jump"
 	if is_on_floor_custom:
 		jumpTime = jumpTimeMax;
 	else:
 		jumpTime -= delta * 1e3;
+	
 	# Handle jump.
+	
 	# Add jump preparation time before jump to account for that one animation frame
 	# where the blob tries to jump
 	# The blob accelerates upwards slowly during this wait time before immediately going up
@@ -71,15 +72,16 @@ func _process(delta: float) -> void:
 		if prepareJump:
 			jumpTime = 0;
 			if $AnimatedSprite2D.frame >= 1:
-				velocity.y = JUMP_VELOCITY
+				velocity.y = jump_velocity()
 				prepareJump = false;
 			else:
-				velocity.y += JUMP_VELOCITY * 0.12
+				velocity.y += jump_velocity() * 0.12
 	#"""# End jump preparation toggle
 	
 		
 	# dynamic jump, only letting occur once due to spamming == flying
 	# Temporarily removed because it wasn't working
+	#Kate: I see why it didn't work, jump_check wasn't where button is pressed as well
 	"""
 	if Input.is_action_just_released("jump") and velocity.y < 0:
 		if not jump_check:
@@ -88,6 +90,7 @@ func _process(delta: float) -> void:
 	"""
 		
 	#I moved the horizontal flip so it applies on all nodes, not just walking
+	#??? their relative x positions==0 means that only the visible sprite needs to flip
 	$AnimatedSprite2D.flip_h = velocity.x < 0
 		
 	#Idle / Walk animations
@@ -154,30 +157,43 @@ func playeranim(delta):
 		else:
 			jumpFrame = 0;
 	elif playerstate == "death":
-		if !death_animation_over:
-			$AnimatedSprite2D.play("death" + animation_name_modifier)
-			if $AnimatedSprite2D.frame >= 8:
-				death_animation_over = true;
-		else:
-			$AnimatedSprite2D.play("blank")
+		$AnimatedSprite2D.play("death" + animation_name_modifier)
+		#if !death_animation_over:
+			
+		#else:
+		#	$AnimatedSprite2D.play("blank")
 
 
 
 
 
 func change_world():
+	print("Player changing world")
 	Yworld = !Yworld
 	$AnimatedSprite2D.flip_v = !($AnimatedSprite2D.flip_v)
-	$".".y *= -1
+	#replaced flipping y of self in case it changed the player's position in the game
+	$AnimatedSprite2D.position.y *= -1
+	$CollisionShape2D.position.y *= -1
+	$VisibleOnScreenNotifier2D.position.y *= -1
+	gravity *= -1
+	#jump velocity "flipped" in jump_velocity()
 
 
 
 
 
 func death():
-	death_lock = true
 	playerstate = "death"
+	death_lock = true
 	death_animation_over = false;
+
+
+
+func jump_velocity() -> float:
+	if Yworld:
+		return JUMP_VELOCITY *-1
+	else:
+		return JUMP_VELOCITY
 
 
 
@@ -194,6 +210,17 @@ func _on_being_hit():
 func _on_i_frames_timeout() -> void:
 	can_be_hit = true
 
-
+#REMEMBER TO TURN BACK ON WITH CAM-Y
 func _on_leave_screen() -> void:
-	health = 0
+	#health = 0
+	pass
+
+
+func _on_animated_sprite_2d_animation_finished() -> void:
+	if death_lock:
+		$postDeath.start()
+		print("Player finished dying")
+
+
+func _on_post_death_timeout() -> void:
+	get_tree().change_scene_to_file(get_tree().current_scene.scene_file_path)

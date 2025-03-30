@@ -1,7 +1,10 @@
+<<<<<<< HEAD
+[gd_scene load_steps=5 format=3 uid="uid://bgvo0sua3mcnq"]
+=======
 [gd_scene load_steps=7 format=3 uid="uid://bgvo0sua3mcnq"]
+>>>>>>> 9fdd4626a9a97553736c25ab2e3cee4a99f48bce
 
-[ext_resource type="Texture2D" uid="uid://ccbim107j7xxo" path="res://sprites/2025_03_29_0iw_Kleki.png" id="1_wg0iv"]
-[ext_resource type="Script" uid="uid://caa25t2cwn6p6" path="res://bottom.gd" id="2_ok8r0"]
+[ext_resource type="PackedScene" uid="uid://b7kig75wfp6de" path="res://object_scenes/background.tscn" id="1_wg0iv"]
 [ext_resource type="PackedScene" uid="uid://bqao8gba5f2ao" path="res://object_scenes/player.tscn" id="3_audra"]
 [ext_resource type="PackedScene" uid="uid://bqje7ogfhssvg" path="res://object_scenes/pit.tscn" id="4_audra"]
 [ext_resource type="PackedScene" uid="uid://dgy4yrqbl7mvj" path="res://object_scenes/wall.tscn" id="4_x7kom"]
@@ -9,11 +12,15 @@
 
 [node name="Lvl 1" type="Node2D"]
 
+<<<<<<< HEAD
+[node name="Background" parent="." instance=ExtResource("1_wg0iv")]
+=======
 [node name="bottom (temp)" type="Sprite2D" parent="."]
 z_index = -5
 position = Vector2(-99, 604)
 texture = ExtResource("1_wg0iv")
 script = ExtResource("2_ok8r0")
+>>>>>>> 9fdd4626a9a97553736c25ab2e3cee4a99f48bce
 
 [node name="Player" parent="." instance=ExtResource("3_audra")]
 position = Vector2(251, 148)
