@@ -113,7 +113,7 @@ func _process(delta: float) -> void:
 	# replace move and slide so I can handle the collisions manually and add bouncing
 	position += velocity * delta;
 	
-	
+	# Handle collisions
 	var collision_info = move_and_collide(velocity * delta);
 	is_on_floor_custom = false;
 	if collision_info:
