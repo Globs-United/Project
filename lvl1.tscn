@@ -19,3 +19,5 @@ position = Vector2(220, 456)
 [node name="Wall" parent="." instance=ExtResource("4_x7kom")]
 position = Vector2(378, 576)
 scale = Vector2(5, 1)
+
+[node name="Camera2D" type="Camera2D" parent="."]
