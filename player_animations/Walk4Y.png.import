@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bfnoqu6w4mni5"
-path="res://.godot/imported/Walk4Y.png-7225f26b42cdba05b84efc94ccfd17ec.ctex"
+path="res://.godot/imported/Walk4Y.png-fef230e2a19743ebb1b015bccb81ed87.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/player_animations/Walk4Y.png"
-dest_files=["res://.godot/imported/Walk4Y.png-7225f26b42cdba05b84efc94ccfd17ec.ctex"]
+source_file="res://player_animations/Walk4Y.png"
+dest_files=["res://.godot/imported/Walk4Y.png-fef230e2a19743ebb1b015bccb81ed87.ctex"]
 
 [params]
 

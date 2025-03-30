@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c7nh6s87gbpnw"
-path="res://.godot/imported/Jump8ExtraFallFrameY.png-214d1349398d47d920cc71dc211a120e.ctex"
+path="res://.godot/imported/Jump8ExtraFallFrameY.png-ee1389e331673d4075ccfff0e2e2803c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/player_animations/Jump8ExtraFallFrameY.png"
-dest_files=["res://.godot/imported/Jump8ExtraFallFrameY.png-214d1349398d47d920cc71dc211a120e.ctex"]
+source_file="res://player_animations/Jump8ExtraFallFrameY.png"
+dest_files=["res://.godot/imported/Jump8ExtraFallFrameY.png-ee1389e331673d4075ccfff0e2e2803c.ctex"]
 
 [params]
 

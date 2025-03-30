@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dgwdjjuunx584"
-path="res://.godot/imported/Flame_0005.png-834bd3d0ef2a5c4ef9ece11591a68d3a.ctex"
+path="res://.godot/imported/Flame_0005.png-7b9dbe46e3434a839e613f0a3fa4e8a1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/hazard_animations/Flame_0005.png"
-dest_files=["res://.godot/imported/Flame_0005.png-834bd3d0ef2a5c4ef9ece11591a68d3a.ctex"]
+source_file="res://hazard_animations/Flame_0005.png"
+dest_files=["res://.godot/imported/Flame_0005.png-7b9dbe46e3434a839e613f0a3fa4e8a1.ctex"]
 
 [params]
 

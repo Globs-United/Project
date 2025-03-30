@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dy3swmowpu0l0"
-path="res://.godot/imported/LightningY_0000.png-b5693c1ff36db9c1c95fb032bb6f8918.ctex"
+path="res://.godot/imported/LightningY_0000.png-f78c5fb036694136292913d90b17409d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/hazard_animations/LightningY_0000.png"
-dest_files=["res://.godot/imported/LightningY_0000.png-b5693c1ff36db9c1c95fb032bb6f8918.ctex"]
+source_file="res://hazard_animations/LightningY_0000.png"
+dest_files=["res://.godot/imported/LightningY_0000.png-f78c5fb036694136292913d90b17409d.ctex"]
 
 [params]
 
