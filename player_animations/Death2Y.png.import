@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cc165veny4xfl"
-path="res://.godot/imported/Death6Y.png-aa64418bf8d8ce16ec58be6fc6b7f255.ctex"
+uid="uid://dcfkte6cpfdfn"
+path="res://.godot/imported/Death2Y.png-ad96b5498a1ae4c04f11be3c14884871.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Death6Y.png"
-dest_files=["res://.godot/imported/Death6Y.png-aa64418bf8d8ce16ec58be6fc6b7f255.ctex"]
+source_file="res://player_animations/Death2Y.png"
+dest_files=["res://.godot/imported/Death2Y.png-ad96b5498a1ae4c04f11be3c14884871.ctex"]
 
 [params]
 
