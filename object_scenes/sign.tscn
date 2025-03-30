@@ -1,0 +1,63 @@
+[gd_scene load_steps=7 format=3 uid="uid://dh8i38af1uaom"]
+
+[ext_resource type="Script" uid="uid://cxrbbxpwny3r4" path="res://scripts/sign.gd" id="1_foafb"]
+[ext_resource type="Texture2D" uid="uid://bipit6seolnv2" path="res://sprites/sign.png" id="2_uxbxd"]
+[ext_resource type="Texture2D" uid="uid://brm7ufee8ef8p" path="res://sprites/signY.png" id="3_iujbo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hslsx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6svko"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_uxbxd")
+}],
+"loop": true,
+"name": &"sign",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_iujbo")
+}],
+"loop": true,
+"name": &"signY",
+"speed": 5.0
+}]
+
+[sub_resource type="Theme" id="Theme_foafb"]
+default_font_size = 60
+
+[node name="Sign" type="Area2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_foafb")
+text = "Testing the text box on the sign"
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(20, 20)
+shape = SubResource("RectangleShape2D_hslsx")
+
+[node name="SignSelf" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_6svko")
+animation = &"sign"
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = -437.0
+offset_top = -450.0
+offset_right = 438.0
+offset_bottom = -133.0
+tooltip_text = "
+"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 32.0
+offset_right = 849.0
+offset_bottom = 284.0
+theme = SubResource("Theme_foafb")
+justification_flags = 160
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
