@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 const SPEED = 300.0;
 const FRICTION = 30.0;
-const JUMP_VELOCITY = -430; #-370.0;
+const JUMP_VELOCITY = -370.0;
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity");
 
 var is_on_floor_custom = false;
@@ -60,10 +60,10 @@ func _process(delta: float) -> void:
 	# The blob accelerates upwards slowly during this wait time before immediately going up
 	# Can be easily commented out and restored to old version
 	if Input.is_action_just_pressed("jump") and jumpTime > 0:
-		jumpTime = 0;
 		# Comment out below line to undo jump preparation!
-		#"""
-		velocity.y = jump_velocity()
+		jumpTime = 0;
+		"""
+		velocity.y = JUMP_VELOCITY
 		playerstate = "jump"
 		"""
 		prepareJump = true;
@@ -144,8 +144,7 @@ func playeranim(delta):
 		#Make the animation frame be based off of y velocity instead of time.
 		if !prepareJump:
 			if jumpTime <= jumpTimeMax * 0.9:
-				var jumpModifier = -2.95 if Yworld else 2.95;
-				$AnimatedSprite2D.frame = min(int(4 - jumpModifier * velocity.y / JUMP_VELOCITY), 7);
+				$AnimatedSprite2D.frame = min(int(5 - 2.95 * velocity.y / JUMP_VELOCITY), 7);
 				jumpFrame = 0;
 			else:
 				jumpFrame = max(jumpFrame, 8);
@@ -177,8 +176,6 @@ func change_world():
 	$CollisionShape2D.position.y *= -1
 	$VisibleOnScreenNotifier2D.position.y *= -1
 	gravity *= -1;
-	velocity.y = max(min(-JUMP_VELOCITY * 1.3, velocity.y), JUMP_VELOCITY * 1.3)
-	playeranim(0);
 	#jump velocity "flipped" in jump_velocity()
 
 
