@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cl5pel4ordpp3"
+path="res://.godot/imported/Dark Theme.mp3-578fc0937219971b1a1138a97f277c36.mp3str"
+
+[deps]
+
+source_file="res://Dark Theme.mp3"
+dest_files=["res://.godot/imported/Dark Theme.mp3-578fc0937219971b1a1138a97f277c36.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

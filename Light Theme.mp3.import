@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ciolmf8opxvae"
+path="res://.godot/imported/Light Theme.mp3-6ae5ec1a7fb1d1c6c7a7e54ba79535da.mp3str"
+
+[deps]
+
+source_file="res://Light Theme.mp3"
+dest_files=["res://.godot/imported/Light Theme.mp3-6ae5ec1a7fb1d1c6c7a7e54ba79535da.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
