@@ -1,10 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://dgy4yrqbl7mvj"]
+[gd_scene load_steps=6 format=3 uid="uid://dgy4yrqbl7mvj"]
 
-[ext_resource type="Texture2D" uid="uid://cw7jv13e5djli" path="res://sprites/grey.png" id="1_xxgf6"]
+[ext_resource type="Texture2D" uid="uid://cw7jv13e5djli" path="res://grey.png" id="1_xxgf6"]
 [ext_resource type="Script" uid="uid://bo555vpjdrsej" path="res://scripts/wall.gd" id="1_y4f30"]
+[ext_resource type="Shader" uid="uid://b4eud5xilac1m" path="res://scripts/wall.gdshader" id="2_c541k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y4f30"]
 size = Vector2(96, 96)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_reybo"]
+shader = ExtResource("2_c541k")
 
 [node name="Wall" type="StaticBody2D"]
 script = ExtResource("1_y4f30")
@@ -14,6 +18,7 @@ metadata/_edit_group_ = true
 shape = SubResource("RectangleShape2D_y4f30")
 
 [node name="Grey" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_reybo")
 position = Vector2(0, 3.05176e-05)
 scale = Vector2(0.96, 0.96)
 texture = ExtResource("1_xxgf6")
