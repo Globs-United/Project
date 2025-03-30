@@ -144,7 +144,8 @@ func playeranim(delta):
 		#Make the animation frame be based off of y velocity instead of time.
 		if !prepareJump:
 			if jumpTime <= jumpTimeMax * 0.9:
-				$AnimatedSprite2D.frame = min(int(5 - 2.95 * velocity.y / JUMP_VELOCITY), 7);
+				var jump_modifier = 2.95 if Yworld else -2.95;
+				$AnimatedSprite2D.frame = min(int(5 + jump_modifier * velocity.y / JUMP_VELOCITY), 7);
 				jumpFrame = 0;
 			else:
 				jumpFrame = max(jumpFrame, 8);
