@@ -1,9 +1,9 @@
 extends CharacterBody2D
 
-const SPEED = 300.0
-const FRICTION = 30.0
-const JUMP_VELOCITY = -370.0
-var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+const SPEED = 300.0;
+const FRICTION = 30.0;
+const JUMP_VELOCITY = -370.0;
+var gravity = ProjectSettings.get_setting("physics/2d/default_gravity");
 
 var is_on_floor_custom = false;
 var jump_check = false
@@ -69,6 +69,7 @@ func _process(delta: float) -> void:
 		$AnimatedSprite2D.frame = 0;
 	else:
 		if prepareJump:
+			jumpTime = 0;
 			if $AnimatedSprite2D.frame >= 1:
 				velocity.y = JUMP_VELOCITY
 				prepareJump = false;
