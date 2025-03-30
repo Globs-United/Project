@@ -3,6 +3,7 @@ extends CharacterBody2D
 const SPEED = 300.0;
 const FRICTION = 30.0;
 const JUMP_VELOCITY = -370.0;
+const TERMINAL_VELOCITY = 1000
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity");
 
 var is_on_floor_custom = false;
@@ -41,6 +42,7 @@ func _process(delta: float) -> void:
 	if death_lock:
 		playeranim(delta)
 		return;
+
 	
 	# Add the gravity.  (+update is_in_air)
 	if not is_on_floor_custom:
@@ -101,6 +103,7 @@ func _process(delta: float) -> void:
 			playerstate = "idle"
 		elif is_on_floor_custom:
 			playerstate = "walk"
+
 	
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -112,7 +115,8 @@ func _process(delta: float) -> void:
 		# Add sign of self to prevent getting to 0
 		# prevents animation sprite direction from switching after stopping
 		velocity.x = move_toward(velocity.x, 0, FRICTION) + 0.01 * sign(velocity.x)
-	
+	if abs(velocity.y) > TERMINAL_VELOCITY:
+		velocity.y = TERMINAL_VELOCITY*sign(velocity.y)
 	playeranim(delta);
 	# replace move and slide so I can handle the collisions manually and add bouncing
 	position += velocity * delta;
@@ -177,6 +181,10 @@ func change_world():
 	$VisibleOnScreenNotifier2D.position.y *= -1
 	gravity *= -1;
 	#jump velocity "flipped" in jump_velocity()
+
+func exitting_pit(tVelY):
+	velocity.y = tVelY
+	print(velocity.y)
 
 
 
