@@ -17,7 +17,7 @@ var jumpTimeMax = 250;
 var playerstate = "idle"
 	#idle, walk, jump, death
 var death_lock = false
-var death_animation_over = false;
+var death_animation_over = true;
 var health = 1
 var can_be_hit = true
 @export var Yworld = false
@@ -64,10 +64,6 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("jump") and jumpTime > 0:
 		# Comment out below line to undo jump preparation!
 		jumpTime = 0;
-		"""
-		velocity.y = JUMP_VELOCITY
-		playerstate = "jump"
-		"""
 		prepareJump = true;
 		$AnimatedSprite2D.frame = 0;
 	else:
@@ -162,10 +158,6 @@ func playeranim(delta):
 			jumpFrame = 0;
 	elif playerstate == "death":
 		$AnimatedSprite2D.play("death" + animation_name_modifier)
-		#if !death_animation_over:
-			
-		#else:
-		#	$AnimatedSprite2D.play("blank")
 
 
 
@@ -191,9 +183,11 @@ func exitting_pit(tVelY):
 
 
 func death():
-	playerstate = "death"
 	death_lock = true
+	playerstate = "death"
 	death_animation_over = false;
+	print("player died: death_lock = "+str(death_lock)+"death_animation_over = "+str(death_animation_over))
+	
 
 
 
@@ -227,8 +221,11 @@ func _on_leave_screen() -> void:
 func _on_animated_sprite_2d_animation_finished() -> void:
 	if death_lock:
 		$postDeath.start()
-		print("Player finished dying")
+		playerstate = "gone"
+	
+		
 
 
 func _on_post_death_timeout() -> void:
+	print("player died: death_lock = "+str(death_lock)+"death_animation_over = "+str(death_animation_over))
 	get_tree().change_scene_to_file(get_tree().current_scene.scene_file_path)
