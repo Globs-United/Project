@@ -1,7 +1,30 @@
-[gd_scene load_steps=7 format=3 uid="uid://d4h8ppy0mb78w"]
+[gd_scene load_steps=30 format=3 uid="uid://d4h8ppy0mb78w"]
 
 [ext_resource type="Script" uid="uid://y0spjnqx4dj2" path="res://scripts/lightning_cloud.gd" id="1_vcdl5"]
-[ext_resource type="Texture2D" uid="uid://cw7jv13e5djli" path="res://grey.png" id="2_51kvq"]
+[ext_resource type="Texture2D" uid="uid://bw0jv6k4ieiwy" path="res://sprites/hazard_animations/Lightning_0000.png" id="2_nx1hr"]
+[ext_resource type="Texture2D" uid="uid://cmrx0ok1fr0hq" path="res://sprites/hazard_animations/Lightning_0001.png" id="3_b78l3"]
+[ext_resource type="Texture2D" uid="uid://ckqa4casj52lo" path="res://sprites/hazard_animations/Lightning_0002.png" id="4_p4ab8"]
+[ext_resource type="Texture2D" uid="uid://cyafky7k2ekvj" path="res://sprites/hazard_animations/Lightning_0003.png" id="5_bi57q"]
+[ext_resource type="Texture2D" uid="uid://c5rf5i34t52t2" path="res://sprites/hazard_animations/Lightning_0004.png" id="6_odtdy"]
+[ext_resource type="Texture2D" uid="uid://cga2hknc873pe" path="res://sprites/hazard_animations/Lightning_0005.png" id="7_2n7fx"]
+[ext_resource type="Texture2D" uid="uid://bqu51vujisohk" path="res://sprites/hazard_animations/Lightning_0006.png" id="8_gx5gs"]
+[ext_resource type="Texture2D" uid="uid://dma700gqvqab0" path="res://sprites/hazard_animations/Lightning_0007.png" id="9_h40x2"]
+[ext_resource type="Texture2D" uid="uid://dy3swmowpu0l0" path="res://sprites/hazard_animations/LightningY_0000.png" id="10_cefix"]
+[ext_resource type="Texture2D" uid="uid://lgd3ylwkqggg" path="res://sprites/hazard_animations/LightningY_0001.png" id="11_klp64"]
+[ext_resource type="Texture2D" uid="uid://b4yqne5sdek66" path="res://sprites/hazard_animations/LightningY_0002.png" id="12_hyihn"]
+[ext_resource type="Texture2D" uid="uid://c06x1yjdrxhqs" path="res://sprites/hazard_animations/LightningY_0003.png" id="13_hctxk"]
+[ext_resource type="Texture2D" uid="uid://bty558vsu3o0t" path="res://sprites/hazard_animations/LightningY_0004.png" id="14_fxpcy"]
+[ext_resource type="Texture2D" uid="uid://bw5mp18dyk5b6" path="res://sprites/hazard_animations/LightningY_0005.png" id="15_uwagh"]
+[ext_resource type="Texture2D" uid="uid://bham23e7mbw7k" path="res://sprites/hazard_animations/LightningY_0006.png" id="16_jaamd"]
+[ext_resource type="Texture2D" uid="uid://bca81sl5s7mbb" path="res://sprites/hazard_animations/LightningY_0007.png" id="17_ch0cf"]
+[ext_resource type="Texture2D" uid="uid://bqhu5m30dwp3x" path="res://sprites/enemy_animations/CloudBlink_0000.png" id="18_k5fhs"]
+[ext_resource type="Texture2D" uid="uid://l6ol34cgyf4v" path="res://sprites/enemy_animations/CloudBlink_0001.png" id="19_qhvtj"]
+[ext_resource type="Texture2D" uid="uid://c7l0l600x5is1" path="res://sprites/enemy_animations/CloudBlink_0002.png" id="20_c2msu"]
+[ext_resource type="Texture2D" uid="uid://cxbsf65fpbcks" path="res://sprites/enemy_animations/CloudBlink_0003.png" id="21_t7xyu"]
+[ext_resource type="Texture2D" uid="uid://ce6fgewy4ftre" path="res://sprites/enemy_animations/CloudBlinkY_0000.png" id="22_ntbb0"]
+[ext_resource type="Texture2D" uid="uid://di01f8nygm3qv" path="res://sprites/enemy_animations/CloudBlinkY_0001.png" id="23_f2t1i"]
+[ext_resource type="Texture2D" uid="uid://b3sc2m2v5tb81" path="res://sprites/enemy_animations/CloudBlinkY_0002.png" id="24_82fal"]
+[ext_resource type="Texture2D" uid="uid://dif2yogxck8gp" path="res://sprites/enemy_animations/CloudBlinkY_0003.png" id="25_37igu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vcdl5"]
 size = Vector2(14, 56.5)
@@ -10,10 +33,68 @@ size = Vector2(14, 56.5)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_51kvq")
+"texture": ExtResource("2_nx1hr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_b78l3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_p4ab8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_bi57q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_odtdy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_2n7fx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_gx5gs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_h40x2")
 }],
 "loop": true,
-"name": &"test",
+"name": &"strike",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_cefix")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_klp64")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_hyihn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_hctxk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_fxpcy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_uwagh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_jaamd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ch0cf")
+}],
+"loop": true,
+"name": &"strikeY",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"wait",
 "speed": 5.0
 }]
 
@@ -21,32 +102,88 @@ animations = [{
 radius = 14.0
 height = 56.0
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_51kvq"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_037l4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_k5fhs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_qhvtj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_c2msu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_t7xyu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_t7xyu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_t7xyu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_t7xyu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_t7xyu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_t7xyu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_t7xyu")
+}],
+"loop": true,
+"name": &"blink",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_ntbb0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_f2t1i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_82fal")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_37igu")
+}],
+"loop": true,
+"name": &"blinkY",
+"speed": 5.0
+}]
 
-[node name="Lightning Cloud" type="StaticBody2D"]
+[node name="Lightning Cloud" type="StaticBody2D" groups=["enemy"]]
+scale = Vector2(0.1, 0.1)
 script = ExtResource("1_vcdl5")
+metadata/_edit_group_ = true
 
 [node name="Lightning" type="Area2D" parent="."]
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lightning"]
-position = Vector2(0, 28.25)
+position = Vector2(0, 350)
+scale = Vector2(30, 20)
 shape = SubResource("RectangleShape2D_vcdl5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Lightning"]
-position = Vector2(4.76837e-07, 28.2041)
-scale = Vector2(-0.105, 0.562428)
+position = Vector2(0, 570)
 sprite_frames = SubResource("SpriteFrames_51kvq")
-animation = &"test"
+animation = &"strike"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -140)
 rotation = 1.5708
+scale = Vector2(18, 17)
 shape = SubResource("CapsuleShape2D_srwrl")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(9.53674e-07, -6.55651e-07)
-scale = Vector2(36, 22)
-texture = SubResource("PlaceholderTexture2D_51kvq")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_037l4")
+animation = &"blink"
 
 [node name="StrikeTimer" type="Timer" parent="."]
 one_shot = true
