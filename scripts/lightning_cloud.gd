@@ -22,14 +22,15 @@ func _process(_delta: float) -> void:
 
 
 
-func _on_strike_timer_timeout() -> void:
-	lightning_striking = false
+
+
+func _on_animated_sprite_2d_animation_finished() -> void:
 	$RestTimer.start()
 	$Lightning/AnimatedSprite2D.play("wait")
+	lightning_striking = false
 
 
 func _on_rest_timer_timeout() -> void:
-	$StrikeTimer.start()
 	lightning_striking = true
 	if Yworld:
 		$Lightning/AnimatedSprite2D.play("strikeY")

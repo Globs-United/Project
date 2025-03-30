@@ -1,30 +1,30 @@
 [gd_scene load_steps=30 format=3 uid="uid://d4h8ppy0mb78w"]
 
 [ext_resource type="Script" uid="uid://y0spjnqx4dj2" path="res://scripts/lightning_cloud.gd" id="1_vcdl5"]
-[ext_resource type="Texture2D" uid="uid://bw0jv6k4ieiwy" path="res://sprites/hazard_animations/Lightning_0000.png" id="2_nx1hr"]
-[ext_resource type="Texture2D" uid="uid://cmrx0ok1fr0hq" path="res://sprites/hazard_animations/Lightning_0001.png" id="3_b78l3"]
-[ext_resource type="Texture2D" uid="uid://ckqa4casj52lo" path="res://sprites/hazard_animations/Lightning_0002.png" id="4_p4ab8"]
-[ext_resource type="Texture2D" uid="uid://cyafky7k2ekvj" path="res://sprites/hazard_animations/Lightning_0003.png" id="5_bi57q"]
-[ext_resource type="Texture2D" uid="uid://c5rf5i34t52t2" path="res://sprites/hazard_animations/Lightning_0004.png" id="6_odtdy"]
-[ext_resource type="Texture2D" uid="uid://cga2hknc873pe" path="res://sprites/hazard_animations/Lightning_0005.png" id="7_2n7fx"]
-[ext_resource type="Texture2D" uid="uid://bqu51vujisohk" path="res://sprites/hazard_animations/Lightning_0006.png" id="8_gx5gs"]
-[ext_resource type="Texture2D" uid="uid://dma700gqvqab0" path="res://sprites/hazard_animations/Lightning_0007.png" id="9_h40x2"]
-[ext_resource type="Texture2D" uid="uid://dy3swmowpu0l0" path="res://sprites/hazard_animations/LightningY_0000.png" id="10_cefix"]
-[ext_resource type="Texture2D" uid="uid://lgd3ylwkqggg" path="res://sprites/hazard_animations/LightningY_0001.png" id="11_klp64"]
-[ext_resource type="Texture2D" uid="uid://b4yqne5sdek66" path="res://sprites/hazard_animations/LightningY_0002.png" id="12_hyihn"]
-[ext_resource type="Texture2D" uid="uid://c06x1yjdrxhqs" path="res://sprites/hazard_animations/LightningY_0003.png" id="13_hctxk"]
-[ext_resource type="Texture2D" uid="uid://bty558vsu3o0t" path="res://sprites/hazard_animations/LightningY_0004.png" id="14_fxpcy"]
-[ext_resource type="Texture2D" uid="uid://bw5mp18dyk5b6" path="res://sprites/hazard_animations/LightningY_0005.png" id="15_uwagh"]
-[ext_resource type="Texture2D" uid="uid://bham23e7mbw7k" path="res://sprites/hazard_animations/LightningY_0006.png" id="16_jaamd"]
-[ext_resource type="Texture2D" uid="uid://bca81sl5s7mbb" path="res://sprites/hazard_animations/LightningY_0007.png" id="17_ch0cf"]
-[ext_resource type="Texture2D" uid="uid://bqhu5m30dwp3x" path="res://sprites/enemy_animations/CloudBlink_0000.png" id="18_k5fhs"]
-[ext_resource type="Texture2D" uid="uid://l6ol34cgyf4v" path="res://sprites/enemy_animations/CloudBlink_0001.png" id="19_qhvtj"]
-[ext_resource type="Texture2D" uid="uid://c7l0l600x5is1" path="res://sprites/enemy_animations/CloudBlink_0002.png" id="20_c2msu"]
-[ext_resource type="Texture2D" uid="uid://cxbsf65fpbcks" path="res://sprites/enemy_animations/CloudBlink_0003.png" id="21_t7xyu"]
-[ext_resource type="Texture2D" uid="uid://ce6fgewy4ftre" path="res://sprites/enemy_animations/CloudBlinkY_0000.png" id="22_ntbb0"]
-[ext_resource type="Texture2D" uid="uid://di01f8nygm3qv" path="res://sprites/enemy_animations/CloudBlinkY_0001.png" id="23_f2t1i"]
-[ext_resource type="Texture2D" uid="uid://b3sc2m2v5tb81" path="res://sprites/enemy_animations/CloudBlinkY_0002.png" id="24_82fal"]
-[ext_resource type="Texture2D" uid="uid://dif2yogxck8gp" path="res://sprites/enemy_animations/CloudBlinkY_0003.png" id="25_37igu"]
+[ext_resource type="Texture2D" uid="uid://bw0jv6k4ieiwy" path="res://hazard_animations/Lightning_0000.png" id="2_nx1hr"]
+[ext_resource type="Texture2D" uid="uid://cmrx0ok1fr0hq" path="res://hazard_animations/Lightning_0001.png" id="3_b78l3"]
+[ext_resource type="Texture2D" uid="uid://ckqa4casj52lo" path="res://hazard_animations/Lightning_0002.png" id="4_p4ab8"]
+[ext_resource type="Texture2D" uid="uid://cyafky7k2ekvj" path="res://hazard_animations/Lightning_0003.png" id="5_bi57q"]
+[ext_resource type="Texture2D" uid="uid://c5rf5i34t52t2" path="res://hazard_animations/Lightning_0004.png" id="6_odtdy"]
+[ext_resource type="Texture2D" uid="uid://cga2hknc873pe" path="res://hazard_animations/Lightning_0005.png" id="7_2n7fx"]
+[ext_resource type="Texture2D" uid="uid://bqu51vujisohk" path="res://hazard_animations/Lightning_0006.png" id="8_gx5gs"]
+[ext_resource type="Texture2D" uid="uid://dma700gqvqab0" path="res://hazard_animations/Lightning_0007.png" id="9_h40x2"]
+[ext_resource type="Texture2D" uid="uid://dy3swmowpu0l0" path="res://hazard_animations/LightningY_0000.png" id="10_cefix"]
+[ext_resource type="Texture2D" uid="uid://lgd3ylwkqggg" path="res://hazard_animations/LightningY_0001.png" id="11_klp64"]
+[ext_resource type="Texture2D" uid="uid://b4yqne5sdek66" path="res://hazard_animations/LightningY_0002.png" id="12_hyihn"]
+[ext_resource type="Texture2D" uid="uid://c06x1yjdrxhqs" path="res://hazard_animations/LightningY_0003.png" id="13_hctxk"]
+[ext_resource type="Texture2D" uid="uid://bty558vsu3o0t" path="res://hazard_animations/LightningY_0004.png" id="14_fxpcy"]
+[ext_resource type="Texture2D" uid="uid://bw5mp18dyk5b6" path="res://hazard_animations/LightningY_0005.png" id="15_uwagh"]
+[ext_resource type="Texture2D" uid="uid://bham23e7mbw7k" path="res://hazard_animations/LightningY_0006.png" id="16_jaamd"]
+[ext_resource type="Texture2D" uid="uid://bca81sl5s7mbb" path="res://hazard_animations/LightningY_0007.png" id="17_ch0cf"]
+[ext_resource type="Texture2D" uid="uid://bqhu5m30dwp3x" path="res://enemy_animations/CloudBlink_0000.png" id="18_k5fhs"]
+[ext_resource type="Texture2D" uid="uid://l6ol34cgyf4v" path="res://enemy_animations/CloudBlink_0001.png" id="19_qhvtj"]
+[ext_resource type="Texture2D" uid="uid://c7l0l600x5is1" path="res://enemy_animations/CloudBlink_0002.png" id="20_c2msu"]
+[ext_resource type="Texture2D" uid="uid://cxbsf65fpbcks" path="res://enemy_animations/CloudBlink_0003.png" id="21_t7xyu"]
+[ext_resource type="Texture2D" uid="uid://ce6fgewy4ftre" path="res://enemy_animations/CloudBlinkY_0000.png" id="22_ntbb0"]
+[ext_resource type="Texture2D" uid="uid://di01f8nygm3qv" path="res://enemy_animations/CloudBlinkY_0001.png" id="23_f2t1i"]
+[ext_resource type="Texture2D" uid="uid://b3sc2m2v5tb81" path="res://enemy_animations/CloudBlinkY_0002.png" id="24_82fal"]
+[ext_resource type="Texture2D" uid="uid://dif2yogxck8gp" path="res://enemy_animations/CloudBlinkY_0003.png" id="25_37igu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vcdl5"]
 size = Vector2(14, 56.5)
@@ -185,15 +185,15 @@ shape = SubResource("CapsuleShape2D_srwrl")
 sprite_frames = SubResource("SpriteFrames_037l4")
 animation = &"blink"
 
-[node name="StrikeTimer" type="Timer" parent="."]
-one_shot = true
-
 [node name="RestTimer" type="Timer" parent="."]
+wait_time = 4.0
 one_shot = true
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+position = Vector2(0, -150)
+scale = Vector2(50, 30)
 
 [connection signal="body_entered" from="Lightning" to="." method="_on_lightning_body_entered"]
 [connection signal="body_exited" from="Lightning" to="." method="_on_lightning_body_exited"]
-[connection signal="timeout" from="StrikeTimer" to="." method="_on_strike_timer_timeout"]
+[connection signal="animation_finished" from="Lightning/AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="timeout" from="RestTimer" to="." method="_on_rest_timer_timeout"]
