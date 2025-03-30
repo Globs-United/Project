@@ -175,7 +175,7 @@ func change_world():
 	$AnimatedSprite2D.position.y *= -1
 	$CollisionShape2D.position.y *= -1
 	$VisibleOnScreenNotifier2D.position.y *= -1
-	gravity *= -1
+	gravity *= -1;
 	#jump velocity "flipped" in jump_velocity()
 
 
