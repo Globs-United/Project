@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b0no7vsg6pqlp"
+path="res://.godot/imported/City Traffic Background.wav-b27da27f999551a4d0235018b93d9e6b.sample"
+
+[deps]
+
+source_file="res://City Traffic Background.wav"
+dest_files=["res://.godot/imported/City Traffic Background.wav-b27da27f999551a4d0235018b93d9e6b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
