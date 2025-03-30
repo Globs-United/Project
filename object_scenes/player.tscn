@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://bqao8gba5f2ao"]
+[gd_scene load_steps=61 format=3 uid="uid://bqao8gba5f2ao"]
 
 [ext_resource type="Script" uid="uid://1w83ymbu0tvx" path="res://scripts/playerKate.gd" id="1_cwixu"]
 [ext_resource type="Texture2D" uid="uid://ddid1snlxvy8h" path="res://sprites/Death1.png" id="2_h0q6h"]
@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://bo5e84r8le2e7" path="res://sprites/Death8.png" id="9_jiluc"]
 [ext_resource type="Texture2D" uid="uid://cf1ri8pnwuicl" path="res://player_animations/Jump1.png" id="10_oifb6"]
 [ext_resource type="Texture2D" uid="uid://6s8mur2e2evj" path="res://sprites/Death1Y.png" id="10_rdxro"]
+[ext_resource type="Texture2D" uid="uid://5v3hwf52cfbf" path="res://sprites/transparentPixel.png" id="10_t5otc"]
 [ext_resource type="Texture2D" uid="uid://b0clc3is76yhg" path="res://player_animations/Jump2.png" id="11_kfkp0"]
 [ext_resource type="Texture2D" uid="uid://dcfkte6cpfdfn" path="res://sprites/Death2Y.png" id="11_r8cxx"]
 [ext_resource type="Texture2D" uid="uid://itqutra75c1d" path="res://sprites/Death3Y.png" id="12_7xpll"]
@@ -62,6 +63,14 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("10_t5otc")
+}],
+"loop": true,
+"name": &"blank",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("2_h0q6h")
 }, {
 "duration": 1.0,
@@ -84,6 +93,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("9_jiluc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_t5otc")
 }],
 "loop": true,
 "name": &"death",
@@ -113,6 +125,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("17_mnwd3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_t5otc")
 }],
 "loop": true,
 "name": &"deathY",

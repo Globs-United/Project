@@ -1,5 +1,5 @@
 extends StaticBody2D
-
+"""
 var screen_size;
 
 func _ready():
@@ -7,3 +7,4 @@ func _ready():
 	
 	position *= screen_size.y / 700;
 	scale    *= screen_size.y / 700;
+"""
