@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bgvo0sua3mcnq"]
+[gd_scene load_steps=9 format=3 uid="uid://bgvo0sua3mcnq"]
 
 [ext_resource type="PackedScene" uid="uid://dgwk5b1f52pic" path="res://object_scenes/pit.tscn" id="2_ok8r0"]
 [ext_resource type="PackedScene" uid="uid://bqao8gba5f2ao" path="res://object_scenes/player.tscn" id="3_audra"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://w8iguxe1l24l" path="res://scripts/camera_2d.gd" id="5_ok8r0"]
 [ext_resource type="PackedScene" uid="uid://dbjmiklp0s68j" path="res://object_scenes/spikes.tscn" id="6_audra"]
 [ext_resource type="PackedScene" uid="uid://d4h8ppy0mb78w" path="res://object_scenes/lightning_cloud.tscn" id="6_x7kom"]
+[ext_resource type="PackedScene" uid="uid://wsjajdqhncat" path="res://object_scenes/fire.tscn" id="8_qoovb"]
 
 [node name="Lvl 1" type="Node2D"]
 
@@ -34,3 +35,7 @@ scale = Vector2(0.2, 0.2)
 [node name="Spikes" parent="." instance=ExtResource("6_audra")]
 position = Vector2(890, 283)
 scale = Vector2(0.3, 0.3)
+
+[node name="Fire" parent="." instance=ExtResource("8_qoovb")]
+position = Vector2(30, 203)
+scale = Vector2(0.1, 0.1)
