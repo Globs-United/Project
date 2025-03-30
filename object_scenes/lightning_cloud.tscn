@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://d4h8ppy0mb78w"]
+[gd_scene load_steps=29 format=3 uid="uid://d4h8ppy0mb78w"]
 
 [ext_resource type="Script" uid="uid://y0spjnqx4dj2" path="res://scripts/lightning_cloud.gd" id="1_vcdl5"]
 [ext_resource type="Texture2D" uid="uid://bw0jv6k4ieiwy" path="res://hazard_animations/Lightning_0000.png" id="2_nx1hr"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bqu51vujisohk" path="res://hazard_animations/Lightning_0006.png" id="8_gx5gs"]
 [ext_resource type="Texture2D" uid="uid://dma700gqvqab0" path="res://hazard_animations/Lightning_0007.png" id="9_h40x2"]
 [ext_resource type="Texture2D" uid="uid://dy3swmowpu0l0" path="res://hazard_animations/LightningY_0000.png" id="10_cefix"]
+[ext_resource type="Texture2D" uid="uid://5v3hwf52cfbf" path="res://sprites/transparentPixel.png" id="10_hxtg4"]
 [ext_resource type="Texture2D" uid="uid://lgd3ylwkqggg" path="res://hazard_animations/LightningY_0001.png" id="11_klp64"]
 [ext_resource type="Texture2D" uid="uid://b4yqne5sdek66" path="res://hazard_animations/LightningY_0002.png" id="12_hyihn"]
 [ext_resource type="Texture2D" uid="uid://c06x1yjdrxhqs" path="res://hazard_animations/LightningY_0003.png" id="13_hctxk"]
@@ -20,11 +21,9 @@
 [ext_resource type="Texture2D" uid="uid://bqhu5m30dwp3x" path="res://enemy_animations/CloudBlink_0000.png" id="18_k5fhs"]
 [ext_resource type="Texture2D" uid="uid://l6ol34cgyf4v" path="res://enemy_animations/CloudBlink_0001.png" id="19_qhvtj"]
 [ext_resource type="Texture2D" uid="uid://c7l0l600x5is1" path="res://enemy_animations/CloudBlink_0002.png" id="20_c2msu"]
-[ext_resource type="Texture2D" uid="uid://cxbsf65fpbcks" path="res://enemy_animations/CloudBlink_0003.png" id="21_t7xyu"]
 [ext_resource type="Texture2D" uid="uid://ce6fgewy4ftre" path="res://enemy_animations/CloudBlinkY_0000.png" id="22_ntbb0"]
 [ext_resource type="Texture2D" uid="uid://di01f8nygm3qv" path="res://enemy_animations/CloudBlinkY_0001.png" id="23_f2t1i"]
 [ext_resource type="Texture2D" uid="uid://b3sc2m2v5tb81" path="res://enemy_animations/CloudBlinkY_0002.png" id="24_82fal"]
-[ext_resource type="Texture2D" uid="uid://dif2yogxck8gp" path="res://enemy_animations/CloudBlinkY_0003.png" id="25_37igu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vcdl5"]
 size = Vector2(14, 56.5)
@@ -55,6 +54,33 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("9_h40x2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_p4ab8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_bi57q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_odtdy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_2n7fx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_gx5gs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_h40x2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_b78l3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_nx1hr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_hxtg4")
 }],
 "loop": true,
 "name": &"strike",
@@ -84,6 +110,33 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("17_ch0cf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_hyihn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_hctxk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_fxpcy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_uwagh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_jaamd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ch0cf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_klp64")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_cefix")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_hxtg4")
 }],
 "loop": true,
 "name": &"strikeY",
@@ -91,7 +144,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": null
+"texture": ExtResource("10_hxtg4")
 }],
 "loop": true,
 "name": &"wait",
@@ -113,27 +166,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("20_c2msu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("21_t7xyu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("21_t7xyu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("21_t7xyu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("21_t7xyu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("21_t7xyu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("21_t7xyu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("21_t7xyu")
 }],
 "loop": true,
 "name": &"blink",
@@ -148,9 +180,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("24_82fal")
-}, {
-"duration": 1.0,
-"texture": ExtResource("25_37igu")
 }],
 "loop": true,
 "name": &"blinkY",
@@ -173,7 +202,8 @@ shape = SubResource("RectangleShape2D_vcdl5")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Lightning"]
 position = Vector2(0, 570)
 sprite_frames = SubResource("SpriteFrames_51kvq")
-animation = &"strike"
+animation = &"wait"
+frame_progress = 0.192698
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -140)
@@ -184,6 +214,7 @@ shape = SubResource("CapsuleShape2D_srwrl")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_037l4")
 animation = &"blink"
+frame_progress = 0.471632
 
 [node name="RestTimer" type="Timer" parent="."]
 wait_time = 4.0

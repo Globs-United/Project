@@ -8,17 +8,21 @@ var player_within = false
 
 func _ready() -> void:
 	$RestTimer.start()
+	change_world();
 
 func _process(_delta: float) -> void:
 	if lightning_striking && player_within:
 		get_tree().call_group("player", "_on_being_hit")
-	if Yworld != $AnimatedSprite2D.flip_v:
-		Yworld = !Yworld
-		change_world()
+	#if Yworld != $AnimatedSprite2D.flip_v:
+		#Yworld = !Yworld
+		#change_world()
 	if Yworld:
 		$AnimatedSprite2D.play("blinkY")
 	else:
 		$AnimatedSprite2D.play("blink")
+	
+	if $Lightning/AnimatedSprite2D.frame == 16:
+		_on_animated_sprite_2d_animation_finished();
 
 
 
@@ -48,7 +52,8 @@ func _on_lightning_body_exited(body: Node2D) -> void:
 		player_within = false
 
 func change_world():
-	Yworld = !Yworld
-	$AnimatedSprite2D.flip_v = !($AnimatedSprite2D.flip_v)
-	$Lightning/AnimatedSprite2D.flip_v = $AnimatedSprite2D.flip_v
-	$".".y *= -1
+	Yworld = !Yworld;
+	#$AnimatedSprite2D.flip_v = !($AnimatedSprite2D.flip_v);
+	$Lightning/AnimatedSprite2D.flip_v = $AnimatedSprite2D.flip_v;
+	position.y = 600 - (position.y - scale.y * 570);
+	scale.y *= -1;
