@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=3 uid="uid://bqao8gba5f2ao"]
+[gd_scene load_steps=59 format=3 uid="uid://bqao8gba5f2ao"]
 
 [ext_resource type="Script" uid="uid://1w83ymbu0tvx" path="res://scripts/playerKate.gd" id="1_cwixu"]
 [ext_resource type="Texture2D" uid="uid://ddid1snlxvy8h" path="res://player_animations/Death1.png" id="2_h0q6h"]
@@ -17,7 +17,6 @@
 [ext_resource type="Texture2D" uid="uid://d84krtqapxnk" path="res://player_animations/Death7.png" id="8_4t6iu"]
 [ext_resource type="Texture2D" uid="uid://dgb2giaw2b3n1" path="res://player_animations/Idle4Y.png" id="9_0a7qy"]
 [ext_resource type="Texture2D" uid="uid://bo5e84r8le2e7" path="res://player_animations/Death8.png" id="9_jiluc"]
-[ext_resource type="Texture2D" uid="uid://cf1ri8pnwuicl" path="res://player_animations/Jump1.png" id="10_oifb6"]
 [ext_resource type="Texture2D" uid="uid://6s8mur2e2evj" path="res://player_animations/Death1Y.png" id="10_rdxro"]
 [ext_resource type="Texture2D" uid="uid://5v3hwf52cfbf" path="res://sprites/transparentPixel.png" id="10_t5otc"]
 [ext_resource type="Texture2D" uid="uid://b0clc3is76yhg" path="res://player_animations/Jump2.png" id="11_kfkp0"]
@@ -38,7 +37,6 @@
 [ext_resource type="Texture2D" uid="uid://bi53uj7g6nq27" path="res://player_animations/Jump10.png" id="19_nfiuj"]
 [ext_resource type="Texture2D" uid="uid://bubj2nr2as813" path="res://player_animations/Jump11.png" id="20_bucch"]
 [ext_resource type="Texture2D" uid="uid://ilj0iv7mtpex" path="res://player_animations/Jump12.png" id="21_383ce"]
-[ext_resource type="Texture2D" uid="uid://b10s6io0vnt3d" path="res://player_animations/Jump1Y.png" id="22_e1ucv"]
 [ext_resource type="Texture2D" uid="uid://db7aw12cecbgp" path="res://player_animations/Jump2Y.png" id="23_4t6iu"]
 [ext_resource type="Texture2D" uid="uid://b5pyqyvqwxv3q" path="res://player_animations/Jump3Y.png" id="24_jiluc"]
 [ext_resource type="Texture2D" uid="uid://dk6n0uslk138o" path="res://player_animations/Jump4Y.png" id="25_rdxro"]
@@ -169,9 +167,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("10_oifb6")
-}, {
-"duration": 1.0,
 "texture": ExtResource("11_kfkp0")
 }, {
 "duration": 1.0,
@@ -209,9 +204,6 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": ExtResource("22_e1ucv")
-}, {
 "duration": 1.0,
 "texture": ExtResource("23_4t6iu")
 }, {
@@ -294,7 +286,7 @@ metadata/_edit_group_ = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["player"]]
 scale = Vector2(0.867188, 0.507813)
 sprite_frames = SubResource("SpriteFrames_i3pqv")
-animation = &"deathY"
+animation = &"jumpY"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -7)
