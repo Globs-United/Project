@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bgvo0sua3mcnq"]
+[gd_scene load_steps=7 format=3 uid="uid://bgvo0sua3mcnq"]
 
 [ext_resource type="PackedScene" uid="uid://dgwk5b1f52pic" path="res://object_scenes/pit.tscn" id="2_ok8r0"]
 [ext_resource type="PackedScene" uid="uid://bqao8gba5f2ao" path="res://object_scenes/player.tscn" id="3_audra"]
 [ext_resource type="PackedScene" uid="uid://dgy4yrqbl7mvj" path="res://object_scenes/wall.tscn" id="4_x7kom"]
 [ext_resource type="PackedScene" uid="uid://b7kig75wfp6de" path="res://object_scenes/background.tscn" id="5_audra"]
 [ext_resource type="Script" uid="uid://w8iguxe1l24l" path="res://scripts/camera_2d.gd" id="5_ok8r0"]
+[ext_resource type="PackedScene" uid="uid://dbjmiklp0s68j" path="res://object_scenes/spikes.tscn" id="6_audra"]
 
 [node name="Lvl 1" type="Node2D"]
 
@@ -24,3 +25,7 @@ position = Vector2(576, 350)
 script = ExtResource("5_ok8r0")
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("5_audra")]
+
+[node name="Spikes" parent="." instance=ExtResource("6_audra")]
+position = Vector2(989, 232)
+scale = Vector2(0.3, 0.3)

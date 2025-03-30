@@ -1,8 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://dbjmiklp0s68j"]
+[gd_scene load_steps=9 format=3 uid="uid://dbjmiklp0s68j"]
 
 [ext_resource type="Script" uid="uid://d03pns3dseony" path="res://scripts/spikes.gd" id="1_0fqjf"]
 [ext_resource type="Texture2D" uid="uid://ywynfr8v38s5" path="res://sprites/Spikes.png" id="2_guw6e"]
+[ext_resource type="Shader" uid="uid://bmffl55dpea8m" path="res://object_scenes/spikes.gdshader" id="2_jh1ha"]
 [ext_resource type="Texture2D" uid="uid://couqgeu0lfdrt" path="res://sprites/SpikesY.png" id="3_guw6e"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kpnp0"]
+shader = ExtResource("2_jh1ha")
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jh1ha"]
 animations = [{
@@ -32,8 +36,9 @@ script = ExtResource("1_0fqjf")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_kpnp0")
 sprite_frames = SubResource("SpriteFrames_jh1ha")
-animation = &"spikeY"
+animation = &"spike"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(50, 0)
