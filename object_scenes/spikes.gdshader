@@ -9,7 +9,7 @@ void vertex() {
 void fragment() {
 	bool worldY = wrldVertex.y > 350.0;
 	vec4 col = texture(TEXTURE, UV);
-	
+
 	if(worldY){
 		COLOR = vec4(1.0 - col.g, 0.9294117647058824 - 0.9294117647058824 * col.g, 0.42745098039215684 - 0.42745098039215684 * col.g, col.a);
 	}else{

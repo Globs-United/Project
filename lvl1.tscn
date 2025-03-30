@@ -23,7 +23,7 @@ position = Vector2(242, 350)
 scale = Vector2(5, 2)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(576, 350)
+position = Vector2(0, 350)
 script = ExtResource("5_ok8r0")
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("5_audra")]
