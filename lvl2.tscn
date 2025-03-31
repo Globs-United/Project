@@ -36,6 +36,7 @@ scale = Vector2(10, 0.5)
 position = Vector2(0, 175)
 zoom = Vector2(2, 2)
 script = ExtResource("4_3pm5q")
+smallScreen = true
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("5_uj1pa")]
 

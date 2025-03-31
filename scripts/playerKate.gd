@@ -24,6 +24,7 @@ var death_animation_over = true;
 var health = initialHealth;
 var can_be_hit = true
 @export var Yworld = false
+var hasTraveled = false;
 
 
 # I added playerKateOld.gd in case you want to look at some of your old code to recover it
@@ -157,6 +158,7 @@ func change_world():
 	$VisibleOnScreenNotifier2D.position.y *= -1
 	gravity *= -1;
 	#jump velocity "flipped" in jump_velocity()
+	hasTraveled = true;
 
 func exitting_pit(tVelY):
 	velocity.y = tVelY
@@ -221,3 +223,4 @@ func _on_post_death_timeout() -> void:
 	death_animation_over = false;
 	velocity = Vector2(0, 0);
 	health = initialHealth;
+	hasTraveled = false;
