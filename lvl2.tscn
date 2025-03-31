@@ -1,0 +1,74 @@
+[gd_scene load_steps=10 format=3 uid="uid://cill11k6nch8o"]
+
+[ext_resource type="PackedScene" uid="uid://bqao8gba5f2ao" path="res://object_scenes/player.tscn" id="1_aq45b"]
+[ext_resource type="PackedScene" uid="uid://dgwk5b1f52pic" path="res://object_scenes/pit.tscn" id="2_jukch"]
+[ext_resource type="PackedScene" uid="uid://dgy4yrqbl7mvj" path="res://object_scenes/wall.tscn" id="3_vcnes"]
+[ext_resource type="Script" uid="uid://w8iguxe1l24l" path="res://scripts/camera_2d.gd" id="4_3pm5q"]
+[ext_resource type="PackedScene" uid="uid://b7kig75wfp6de" path="res://object_scenes/background.tscn" id="5_uj1pa"]
+[ext_resource type="PackedScene" uid="uid://d4h8ppy0mb78w" path="res://object_scenes/lightning_cloud.tscn" id="6_nujma"]
+[ext_resource type="PackedScene" uid="uid://dbjmiklp0s68j" path="res://object_scenes/spikes.tscn" id="7_t5h3c"]
+[ext_resource type="PackedScene" uid="uid://wsjajdqhncat" path="res://object_scenes/fire.tscn" id="8_ux455"]
+[ext_resource type="PackedScene" uid="uid://dh8i38af1uaom" path="res://object_scenes/sign.tscn" id="9_jukch"]
+
+[node name="Lvl 2" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_aq45b")]
+position = Vector2(217, 302)
+scale = Vector2(0.4, 0.4)
+
+[node name="Pit" parent="." instance=ExtResource("2_jukch")]
+position = Vector2(785, -302)
+scale = Vector2(0.8, 0.45)
+
+[node name="Wall" parent="." instance=ExtResource("3_vcnes")]
+position = Vector2(2400, 350)
+scale = Vector2(50, 0.5)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, 175)
+zoom = Vector2(2, 2)
+script = ExtResource("4_3pm5q")
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("5_uj1pa")]
+
+[node name="Lightning Cloud" parent="." instance=ExtResource("6_nujma")]
+position = Vector2(129, -289)
+scale = Vector2(0.16, 0.16)
+
+[node name="Spikes" parent="." instance=ExtResource("7_t5h3c")]
+position = Vector2(511, -308)
+scale = Vector2(0.3, 0.3)
+
+[node name="Fire" parent="." instance=ExtResource("8_ux455")]
+position = Vector2(345, -370)
+scale = Vector2(0.07, 0.07)
+
+[node name="Sign" parent="." instance=ExtResource("9_jukch")]
+position = Vector2(198, 296)
+scale = Vector2(0.15, 0.15)
+text = "Use the WASD Keys to move!"
+
+[node name="Wall2" parent="." instance=ExtResource("3_vcnes")]
+position = Vector2(388, 298)
+scale = Vector2(0.25, 1)
+
+[node name="Wall7" parent="." instance=ExtResource("3_vcnes")]
+position = Vector2(1010, -24)
+scale = Vector2(0.25, 1)
+
+[node name="Wall3" parent="." instance=ExtResource("3_vcnes")]
+position = Vector2(598, 191)
+scale = Vector2(0.25, 1)
+
+[node name="Wall4" parent="." instance=ExtResource("3_vcnes")]
+position = Vector2(816, 214)
+scale = Vector2(0.25, 2.56)
+
+[node name="Wall5" parent="." instance=ExtResource("3_vcnes")]
+position = Vector2(1358, 228)
+scale = Vector2(3, 0.25)
+
+[node name="Wall6" parent="." instance=ExtResource("3_vcnes")]
+position = Vector2(1099, 135)
+rotation = 0.778565
+scale = Vector2(2.5, 0.25)

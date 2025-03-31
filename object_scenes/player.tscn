@@ -276,7 +276,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_cwixu"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_44ieu"]
+radius = 7.24138
+height = 17.8231
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 scale = Vector2(0.6, 0.6)
@@ -291,7 +293,7 @@ animation = &"jumpY"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -7)
 scale = Vector2(14.5, 4.9)
-shape = SubResource("RectangleShape2D_cwixu")
+shape = SubResource("CapsuleShape2D_44ieu")
 
 [node name="iFrames" type="Timer" parent="."]
 one_shot = true

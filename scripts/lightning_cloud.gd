@@ -5,7 +5,7 @@ var lightning_striking = false
 var player_within = false
 @export var Yworld = false
 @export var strike_time = 1.0
-@export var rest_time = 1.0
+@export var rest_time = 3.0
 
 
 func _ready() -> void:
