@@ -79,7 +79,7 @@ position = Vector2(4460, 270)
 scale = Vector2(0.2, 0.2)
 
 [node name="Checkpoint11" parent="." instance=ExtResource("8_vcnes")]
-position = Vector2(3763, 89)
+position = Vector2(3763, 105)
 scale = Vector2(0.2, 0.2)
 Yworld = true
 
@@ -240,7 +240,7 @@ scale = Vector2(1.08, 0.25)
 
 [node name="Wall10" parent="." instance=ExtResource("3_vcnes")]
 z_index = 1
-position = Vector2(3333, 20)
+position = Vector2(3333, 36)
 scale = Vector2(17.008, 0.25)
 
 [node name="Wall27" parent="." instance=ExtResource("3_vcnes")]
@@ -294,12 +294,12 @@ position = Vector2(2857, 297)
 scale = Vector2(0.07, 0.07)
 
 [node name="Fire20" parent="." instance=ExtResource("8_ux455")]
-position = Vector2(3564, 64)
+position = Vector2(3564, 80)
 rotation = 3.14159
 scale = Vector2(0.07, 0.07)
 
 [node name="Fire21" parent="." instance=ExtResource("8_ux455")]
-position = Vector2(3607, 64)
+position = Vector2(3607, 80)
 rotation = 3.14159
 scale = Vector2(0.07, 0.07)
 
@@ -502,9 +502,9 @@ position = Vector2(6703, 350)
 scale = Vector2(5.58001, 0.25)
 
 [node name="Wall12" parent="." instance=ExtResource("3_vcnes")]
-position = Vector2(4249, 20)
+position = Vector2(4249, 36)
 scale = Vector2(2.05999, 0.25)
-moveDownY = 436
+moveDownY = 409
 
 [node name="FinishLine" parent="." instance=ExtResource("11_3pm5q")]
 z_index = 1
@@ -516,3 +516,5 @@ scale = Vector2(0.35, 0.35)
 [node name="VolumeControlMenu" parent="." instance=ExtResource("13_t5h3c")]
 z_index = 2
 scale = Vector2(0.5, 0.5)
+tutorial = false
+hide = true

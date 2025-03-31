@@ -1,6 +1,7 @@
 extends Control
 
 @export var tutorial = true
+@export var hide = false;
 var prev_zoom
 var change = true
 
@@ -18,13 +19,14 @@ func _process(_delta: float) -> void:
 	position = get_node("../Camera2D").position
 	if tutorial:
 		$RichTextLabel.show()
-	if Input.is_action_just_pressed("menu"):
+	if Input.is_action_just_pressed("menu") || hide:
 		$Music.visible = !$Music.visible
 		$Music.editable = !$Music.editable
 		$Noise.visible = !$Noise.visible
 		$Noise.editable = !$Noise.editable
 		tutorial = false
 		$RichTextLabel.hide()
+		hide = false;
 
 
 func _on_music_value_changed(value: float) -> void:

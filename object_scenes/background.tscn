@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bdxuvitu5w5sb" path="res://sprites/City1_tiled.png" id="4_t7lll"]
 
 [node name="ParallaxBackground" type="ParallaxBackground"]
-scroll_base_scale = Vector2(0.7, 0)
+scroll_base_scale = Vector2(0.7, 1)
 scroll_limit_begin = Vector2(-1e+09, 0)
 scroll_limit_end = Vector2(1e+08, 0)
 
@@ -19,7 +19,7 @@ scale = Vector2(5145, 87.5)
 texture = ExtResource("1_lrw5r")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
-motion_scale = Vector2(0.2, 0.8)
+motion_scale = Vector2(0.2, 1)
 motion_mirroring = Vector2(2304, 0)
 
 [node name="City3" type="Sprite2D" parent="ParallaxLayer"]
@@ -28,7 +28,7 @@ scale = Vector2(0.418605, 0.339147)
 texture = ExtResource("2_lrw5r")
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
-motion_scale = Vector2(0.3, 0.9)
+motion_scale = Vector2(0.3, 1)
 motion_mirroring = Vector2(2304, 0)
 
 [node name="City2" type="Sprite2D" parent="ParallaxLayer2"]
