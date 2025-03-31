@@ -1,11 +1,12 @@
 extends Control
 
-var tutorial = true
+@export var tutorial = true
 #var cam : PackedScene = preload("res://object_scenes/camera_2d.tscn")
 
 func _ready() -> void:
 	$Music.value = get_node("../SoundPlayer").music_volume
 	$Noise.value = get_node("../SoundPlayer").noise_volume
+	$RichTextLabel.hide()
 
 
 func _process(_delta: float) -> void:
