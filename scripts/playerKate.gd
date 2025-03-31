@@ -6,6 +6,9 @@ const JUMP_VELOCITY = -300.0;
 const TERMINAL_VELOCITY = 500
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity");
 
+var initialPosition;
+@export var initialHealth = 1;
+
 var is_on_floor_custom = false;
 var jump_check = false
 var prepareJump = false;
@@ -18,7 +21,7 @@ var playerstate = "idle"
 	#idle, walk, jump, death
 var death_lock = false
 var death_animation_over = true;
-var health = 1
+var health = initialHealth;
 var can_be_hit = true
 @export var Yworld = false
 
@@ -31,6 +34,10 @@ var can_be_hit = true
 #use this to denotate if it will first appear in the upside-down world
 #don't worry about the setting Yworld before change_world is called
 #this is b/c change_world changes Yworld
+
+func _ready() -> void:
+	initialPosition = position;
+
 func _process(delta: float) -> void:
 	if Yworld != $AnimatedSprite2D.flip_v:
 		Yworld = !Yworld
@@ -184,6 +191,9 @@ func _on_being_hit():
 		can_be_hit = false
 		$iFrames.start()
 
+func _on_check_point(newPos):
+	initialPosition = newPos;
+
 
 
 func _on_i_frames_timeout() -> void:
@@ -205,4 +215,9 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 
 func _on_post_death_timeout() -> void:
 	print("player died: death_lock = "+str(death_lock)+"death_animation_over = "+str(death_animation_over))
-	get_tree().change_scene_to_file(get_tree().current_scene.scene_file_path)
+	position = initialPosition;
+	death_lock = false;
+	playerstate = "idle";
+	death_animation_over = false;
+	velocity = Vector2(0, 0);
+	health = initialHealth;
