@@ -290,10 +290,14 @@ scale = Vector2(0.867188, 0.507813)
 sprite_frames = SubResource("SpriteFrames_i3pqv")
 animation = &"jumpY"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -7)
-scale = Vector2(14.5, 4.9)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D"]
+position = Vector2(0, -13.7846)
+scale = Vector2(16.7207, 9.64922)
 shape = SubResource("CapsuleShape2D_44ieu")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(0.867188, 0.507813)
+polygon = PackedVector2Array(-21.1411, -105.026, -117.237, 75.4871, 121.081, 75.4871, 19.2192, -105.026)
 
 [node name="iFrames" type="Timer" parent="."]
 one_shot = true

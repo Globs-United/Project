@@ -162,7 +162,7 @@ func change_world():
 	$AnimatedSprite2D.flip_v = !($AnimatedSprite2D.flip_v)
 	#replaced flipping y of self in case it changed the player's position in the game
 	$AnimatedSprite2D.position.y *= -1
-	$CollisionShape2D.position.y *= -1
+	$CollisionPolygon2D.position.y *= -1
 	$VisibleOnScreenNotifier2D.position.y *= -1
 	gravity *= -1;
 	#jump velocity "flipped" in jump_velocity()
