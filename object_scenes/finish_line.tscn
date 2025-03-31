@@ -1,6 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://xmbjavg0javs"]
+[gd_scene load_steps=12 format=3 uid="uid://xmbjavg0javs"]
 
-[ext_resource type="Script" uid="uid://dr38ibpyt5xbr" path="res://scripts/finish_line.gd" id="1_uth13"]
+[ext_resource type="Script" uid="uid://7tudfl6rip1d" path="res://scripts/finish_line.gd" id="1_uth13"]
 [ext_resource type="Texture2D" uid="uid://bcsqhpc7npj14" path="res://sprites/FinishLine1.png" id="2_q1pha"]
 [ext_resource type="Texture2D" uid="uid://c0wjf343jhrf" path="res://sprites/FinishLine2.png" id="3_7c7ki"]
 [ext_resource type="Texture2D" uid="uid://cpoagf4a70ep7" path="res://sprites/FinishLine3.png" id="4_owvxm"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://ch0ap7o88y2yb" path="res://sprites/FinishLine5.png" id="6_jgjwk"]
 [ext_resource type="Texture2D" uid="uid://ddqidl2f2kyc1" path="res://sprites/FinishLine6.png" id="7_e6ktn"]
 [ext_resource type="Texture2D" uid="uid://cx1mlvo7uhaqh" path="res://sprites/FinishLine7.png" id="8_jbu5p"]
+[ext_resource type="PackedScene" uid="uid://dgy4yrqbl7mvj" path="res://object_scenes/wall.tscn" id="9_q1pha"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2s0bo"]
 animations = [{
@@ -55,5 +56,9 @@ animation = &"finale"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(988, -1)
 shape = SubResource("RectangleShape2D_neoqu")
+
+[node name="Wall" parent="." instance=ExtResource("9_q1pha")]
+position = Vector2(1122, 0)
+scale = Vector2(2, 23)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
