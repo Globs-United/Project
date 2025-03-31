@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bgvo0sua3mcnq"]
+[gd_scene load_steps=14 format=3 uid="uid://bgvo0sua3mcnq"]
 
 [ext_resource type="PackedScene" uid="uid://dgwk5b1f52pic" path="res://object_scenes/pit.tscn" id="2_ok8r0"]
 [ext_resource type="PackedScene" uid="uid://bqao8gba5f2ao" path="res://object_scenes/player.tscn" id="3_audra"]
@@ -7,39 +7,329 @@
 [ext_resource type="Script" uid="uid://w8iguxe1l24l" path="res://scripts/camera_2d.gd" id="5_ok8r0"]
 [ext_resource type="PackedScene" uid="uid://dbjmiklp0s68j" path="res://object_scenes/spikes.tscn" id="6_audra"]
 [ext_resource type="PackedScene" uid="uid://d4h8ppy0mb78w" path="res://object_scenes/lightning_cloud.tscn" id="6_x7kom"]
+[ext_resource type="PackedScene" uid="uid://cs2y2xdm75fed" path="res://checkpoint.tscn" id="8_lpail"]
 [ext_resource type="PackedScene" uid="uid://wsjajdqhncat" path="res://object_scenes/fire.tscn" id="8_qoovb"]
 [ext_resource type="PackedScene" uid="uid://xmbjavg0javs" path="res://object_scenes/finish_line.tscn" id="9_1w0mb"]
+[ext_resource type="PackedScene" uid="uid://dh8i38af1uaom" path="res://object_scenes/sign.tscn" id="10_mfdtg"]
+[ext_resource type="PackedScene" uid="uid://gkkpg0gxwa8j" path="res://object_scenes/sound_player.tscn" id="12_fgl13"]
+[ext_resource type="PackedScene" uid="uid://cqab7aomtcrlf" path="res://object_scenes/volume_control_menu.tscn" id="13_7wu2o"]
 
-[node name="Lvl 1" type="Node2D"]
+[node name="Lvl 2" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("3_audra")]
-position = Vector2(251, 148)
+z_index = 2
+position = Vector2(209, 175)
+scale = Vector2(0.4, 0.4)
 
 [node name="Pit" parent="." instance=ExtResource("2_ok8r0")]
-position = Vector2(625, 350)
-scale = Vector2(0.8, 0.45)
+z_index = 3
+position = Vector2(4859, 350)
+scale = Vector2(0.329, 0.1)
+oneWay = true
 
 [node name="Wall" parent="." instance=ExtResource("4_x7kom")]
-position = Vector2(242, 350)
-scale = Vector2(5, 2)
+z_index = 1
+position = Vector2(2400, 350)
+scale = Vector2(50, 0.5)
+
+[node name="Wall21" parent="." instance=ExtResource("4_x7kom")]
+z_index = 1
+position = Vector2(5677, 350)
+scale = Vector2(15.8, 0.5)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(0, 350)
+position = Vector2(0, 175)
+zoom = Vector2(2, 2)
 script = ExtResource("5_ok8r0")
+smallScreen = true
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("5_audra")]
 
 [node name="Lightning Cloud" parent="." instance=ExtResource("6_x7kom")]
-position = Vector2(450, 55)
-scale = Vector2(0.2, 0.2)
+position = Vector2(129, -289)
+scale = Vector2(0.16, 0.16)
 
 [node name="Spikes" parent="." instance=ExtResource("6_audra")]
-position = Vector2(890, 283)
-scale = Vector2(0.3, 0.3)
+position = Vector2(2344, 301)
+rotation = 1.5708
+scale = Vector2(0.2, 0.2)
+
+[node name="Spikes23" parent="." instance=ExtResource("6_audra")]
+visible = false
+position = Vector2(2336, 320)
+rotation = 1.5708
+scale = Vector2(0.2, 0.2)
+
+[node name="Spikes24" parent="." instance=ExtResource("6_audra")]
+visible = false
+position = Vector2(2555, 320)
+rotation = 1.5708
+scale = Vector2(0.2, 0.2)
+
+[node name="Spikes2" parent="." instance=ExtResource("6_audra")]
+position = Vector2(2545, 301)
+rotation = 1.5708
+scale = Vector2(0.2, 0.2)
+
+[node name="Spikes5" parent="." instance=ExtResource("6_audra")]
+position = Vector2(3528, 205)
+rotation = -1.5708
+scale = Vector2(0.2, 0.2)
+
+[node name="Spikes11" parent="." instance=ExtResource("6_audra")]
+position = Vector2(4304, 166)
+rotation = -1.5708
+scale = Vector2(0.2, 0.2)
+
+[node name="Spikes12" parent="." instance=ExtResource("6_audra")]
+position = Vector2(4087, 44)
+rotation = -1.5708
+scale = Vector2(0.2, 0.2)
+
+[node name="Spikes8" parent="." instance=ExtResource("6_audra")]
+position = Vector2(4087, 275)
+rotation = -1.5708
+scale = Vector2(0.2, 0.2)
+
+[node name="Checkpoint5" parent="." instance=ExtResource("8_lpail")]
+position = Vector2(4619, 271)
+scale = Vector2(0.2, 0.2)
+
+[node name="Checkpoint7" parent="." instance=ExtResource("8_lpail")]
+position = Vector2(3852, 271)
+scale = Vector2(0.2, 0.2)
+
+[node name="Checkpoint8" parent="." instance=ExtResource("8_lpail")]
+position = Vector2(2773, 272)
+scale = Vector2(0.2, 0.2)
+
+[node name="Checkpoint9" parent="." instance=ExtResource("8_lpail")]
+position = Vector2(1306, 148)
+scale = Vector2(0.2, 0.2)
+
+[node name="Checkpoint6" parent="." instance=ExtResource("8_lpail")]
+position = Vector2(4703, 598)
+scale = Vector2(0.2, 0.2)
+Yworld = true
+
+[node name="Spikes6" parent="." instance=ExtResource("6_audra")]
+position = Vector2(3437, 302)
+rotation = 1.5708
+scale = Vector2(0.2, 0.2)
+
+[node name="Spikes7" parent="." instance=ExtResource("6_audra")]
+position = Vector2(3635, 303)
+rotation = 1.5708
+scale = Vector2(0.2, 0.2)
+
+[node name="Spikes25" parent="." instance=ExtResource("6_audra")]
+visible = false
+position = Vector2(3644, 320)
+rotation = 1.5708
+scale = Vector2(0.2, 0.2)
+
+[node name="Spikes17" parent="." instance=ExtResource("6_audra")]
+position = Vector2(4506, 691)
+rotation = 1.5708
+scale = Vector2(0.2, 0.2)
+
+[node name="Spikes3" parent="." instance=ExtResource("6_audra")]
+position = Vector2(3273, 251)
+scale = Vector2(0.2, 0.2)
+
+[node name="Spikes9" parent="." instance=ExtResource("6_audra")]
+position = Vector2(3963, 153)
+scale = Vector2(0.2, 0.2)
+
+[node name="Spikes10" parent="." instance=ExtResource("6_audra")]
+position = Vector2(4382, 246)
+scale = Vector2(0.2, 0.2)
+
+[node name="Spikes13" parent="." instance=ExtResource("6_audra")]
+position = Vector2(5179, 226)
+scale = Vector2(0.2, 0.2)
+
+[node name="Spikes14" parent="." instance=ExtResource("6_audra")]
+position = Vector2(5179, 26)
+scale = Vector2(0.2, 0.2)
+
+[node name="Spikes4" parent="." instance=ExtResource("6_audra")]
+position = Vector2(2891, 100)
+rotation = 3.14159
+scale = Vector2(0.2, 0.2)
+
+[node name="Spikes15" parent="." instance=ExtResource("6_audra")]
+position = Vector2(4287, 476)
+rotation = 3.14159
+scale = Vector2(0.2, 0.2)
+
+[node name="Spikes16" parent="." instance=ExtResource("6_audra")]
+position = Vector2(4350, 629)
+rotation = 2.35619
+scale = Vector2(0.2, 0.2)
 
 [node name="Fire" parent="." instance=ExtResource("8_qoovb")]
-position = Vector2(30, 203)
-scale = Vector2(0.1, 0.1)
+position = Vector2(345, -370)
+scale = Vector2(0.07, 0.07)
+
+[node name="Sign" parent="." instance=ExtResource("10_mfdtg")]
+position = Vector2(208, 304)
+scale = Vector2(0.15, 0.15)
+text = "Use the WASD Keys to move!"
+
+[node name="Sign2" parent="." instance=ExtResource("10_mfdtg")]
+position = Vector2(2010, 299)
+scale = Vector2(0.15, 0.15)
+text = "Don't touch the spikes!"
+
+[node name="Sign4" parent="." instance=ExtResource("10_mfdtg")]
+position = Vector2(1423, 177)
+scale = Vector2(0.15, 0.15)
+text = "This is a checkpoint!"
+
+[node name="Sign3" parent="." instance=ExtResource("10_mfdtg")]
+position = Vector2(3315, 104)
+scale = Vector2(0.15, 0.15)
+text = "The backs are safe"
+
+[node name="Sign5" parent="." instance=ExtResource("10_mfdtg")]
+position = Vector2(5026, 297)
+scale = Vector2(0.15, 0.15)
+text = "Go in the hole."
+
+[node name="Sign6" parent="." instance=ExtResource("10_mfdtg")]
+position = Vector2(5981, 404)
+rotation = 3.14159
+scale = Vector2(0.15, 0.15)
+text = "The end?"
+Yworld = true
+
+[node name="Wall2" parent="." instance=ExtResource("4_x7kom")]
+position = Vector2(388, 298)
+scale = Vector2(0.25, 1)
+
+[node name="Wall7" parent="." instance=ExtResource("4_x7kom")]
+position = Vector2(1064, 101)
+scale = Vector2(0.25, 2.64)
+
+[node name="Wall3" parent="." instance=ExtResource("4_x7kom")]
+position = Vector2(598, 215)
+scale = Vector2(0.25, 1)
+
+[node name="Wall4" parent="." instance=ExtResource("4_x7kom")]
+position = Vector2(816, 214)
+scale = Vector2(0.25, 2.56)
+
+[node name="Wall8" parent="." instance=ExtResource("4_x7kom")]
+position = Vector2(1790, 212)
+scale = Vector2(0.25, 2.68)
+
+[node name="Wall15" parent="." instance=ExtResource("4_x7kom")]
+position = Vector2(1928, 8.00002)
+scale = Vector2(0.25, 2.68)
+
+[node name="Wall19" parent="." instance=ExtResource("4_x7kom")]
+position = Vector2(2858, 71)
+scale = Vector2(0.25, 2.68)
+
+[node name="Wall22" parent="." instance=ExtResource("4_x7kom")]
+position = Vector2(4932, 457)
+scale = Vector2(0.25, 2.68)
+
+[node name="Wall5" parent="." instance=ExtResource("4_x7kom")]
+position = Vector2(1337, 216)
+scale = Vector2(5.56, 0.25)
+
+[node name="Wall9" parent="." instance=ExtResource("4_x7kom")]
+position = Vector2(2243, 258)
+scale = Vector2(1.04, 0.25)
+
+[node name="Wall13" parent="." instance=ExtResource("4_x7kom")]
+position = Vector2(2424, 196)
+scale = Vector2(1.04, 0.25)
+
+[node name="Wall14" parent="." instance=ExtResource("4_x7kom")]
+position = Vector2(2634, 114)
+scale = Vector2(1.04, 0.25)
+
+[node name="Wall18" parent="." instance=ExtResource("4_x7kom")]
+position = Vector2(3313, 142)
+scale = Vector2(1.04, 0.25)
+
+[node name="Wall20" parent="." instance=ExtResource("4_x7kom")]
+position = Vector2(4015, 239)
+scale = Vector2(0.559995, 0.25)
+
+[node name="Spikes18" parent="." instance=ExtResource("6_audra")]
+position = Vector2(5662, 556)
+rotation = -1.5708
+scale = Vector2(-0.2, 0.2)
+
+[node name="Spikes19" parent="." instance=ExtResource("6_audra")]
+position = Vector2(5428, 446)
+rotation = -1.5708
+scale = Vector2(-0.2, 0.2)
+
+[node name="Spikes20" parent="." instance=ExtResource("6_audra")]
+position = Vector2(5429, 681)
+rotation = -1.5708
+scale = Vector2(-0.2, 0.2)
+
+[node name="Spikes21" parent="." instance=ExtResource("6_audra")]
+position = Vector2(5305, 568)
+scale = Vector2(0.2, 0.2)
+
+[node name="Spikes22" parent="." instance=ExtResource("6_audra")]
+position = Vector2(5740, 474)
+scale = Vector2(0.2, 0.2)
+
+[node name="Wall25" parent="." instance=ExtResource("4_x7kom")]
+position = Vector2(5356, 494)
+scale = Vector2(0.559995, 0.25)
+
+[node name="Wall17" parent="." instance=ExtResource("4_x7kom")]
+position = Vector2(2983, 192)
+scale = Vector2(1.04, 0.25)
+
+[node name="Wall16" parent="." instance=ExtResource("4_x7kom")]
+position = Vector2(3181, 265)
+scale = Vector2(1.04, 0.25)
+
+[node name="Wall24" parent="." instance=ExtResource("4_x7kom")]
+position = Vector2(4697, 547)
+scale = Vector2(2.15999, 0.25)
+
+[node name="Wall23" parent="." instance=ExtResource("4_x7kom")]
+position = Vector2(4626, 432)
+scale = Vector2(2.44, 0.25)
+
+[node name="Wall26" parent="." instance=ExtResource("4_x7kom")]
+position = Vector2(4642, 490)
+scale = Vector2(2.12001, 0.25)
+
+[node name="Wall6" parent="." instance=ExtResource("4_x7kom")]
+position = Vector2(1371, 87)
+scale = Vector2(1.46, 0.25)
+
+[node name="Wall10" parent="." instance=ExtResource("4_x7kom")]
+position = Vector2(1759, 74)
+scale = Vector2(0.900002, 0.25)
+
+[node name="Wall11" parent="." instance=ExtResource("4_x7kom")]
+position = Vector2(1755, 278)
+scale = Vector2(0.900002, 0.25)
+
+[node name="Wall12" parent="." instance=ExtResource("4_x7kom")]
+position = Vector2(1110, 154)
+scale = Vector2(0.900002, 0.25)
 
 [node name="FinishLine" parent="." instance=ExtResource("9_1w0mb")]
-position = Vector2(-174, -34)
+z_index = 1
+position = Vector2(6078, 350)
+scale = Vector2(0.35, 0.35)
+
+[node name="SoundPlayer" parent="." instance=ExtResource("12_fgl13")]
+
+[node name="VolumeControlMenu" parent="." instance=ExtResource("13_7wu2o")]
+z_index = 2
+scale = Vector2(0.5, 0.5)

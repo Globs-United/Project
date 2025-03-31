@@ -26,7 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://b3sc2m2v5tb81" path="res://enemy_animations/CloudBlinkY_0002.png" id="24_82fal"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vcdl5"]
-size = Vector2(14, 56.5)
+size = Vector2(10.6667, 56.5)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_51kvq"]
 animations = [{
@@ -195,7 +195,7 @@ metadata/_edit_group_ = true
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lightning"]
-position = Vector2(0, 350)
+position = Vector2(8.58307e-06, 350)
 scale = Vector2(30, 20)
 shape = SubResource("RectangleShape2D_vcdl5")
 

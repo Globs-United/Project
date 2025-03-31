@@ -1,0 +1,484 @@
+[gd_scene load_steps=14 format=3 uid="uid://dcfm85kclwhlo"]
+
+[ext_resource type="PackedScene" uid="uid://bqao8gba5f2ao" path="res://object_scenes/player.tscn" id="1_772tp"]
+[ext_resource type="PackedScene" uid="uid://dgwk5b1f52pic" path="res://object_scenes/pit.tscn" id="2_18ny8"]
+[ext_resource type="PackedScene" uid="uid://dgy4yrqbl7mvj" path="res://object_scenes/wall.tscn" id="3_52l4t"]
+[ext_resource type="Script" uid="uid://w8iguxe1l24l" path="res://scripts/camera_2d.gd" id="4_i35k0"]
+[ext_resource type="PackedScene" uid="uid://b7kig75wfp6de" path="res://object_scenes/background.tscn" id="5_g1cjp"]
+[ext_resource type="PackedScene" uid="uid://d4h8ppy0mb78w" path="res://object_scenes/lightning_cloud.tscn" id="6_schv6"]
+[ext_resource type="PackedScene" uid="uid://dbjmiklp0s68j" path="res://object_scenes/spikes.tscn" id="7_xelbu"]
+[ext_resource type="PackedScene" uid="uid://cs2y2xdm75fed" path="res://checkpoint.tscn" id="8_u8v2x"]
+[ext_resource type="PackedScene" uid="uid://wsjajdqhncat" path="res://object_scenes/fire.tscn" id="9_ou8sk"]
+[ext_resource type="PackedScene" uid="uid://dh8i38af1uaom" path="res://object_scenes/sign.tscn" id="10_mab4u"]
+[ext_resource type="PackedScene" uid="uid://xmbjavg0javs" path="res://object_scenes/finish_line.tscn" id="11_2033s"]
+[ext_resource type="PackedScene" uid="uid://gkkpg0gxwa8j" path="res://object_scenes/sound_player.tscn" id="12_vixu8"]
+[ext_resource type="PackedScene" uid="uid://cqab7aomtcrlf" path="res://object_scenes/volume_control_menu.tscn" id="13_q0qkx"]
+
+[node name="Lvl 2" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_772tp")]
+z_index = 2
+position = Vector2(4273, 272)
+scale = Vector2(0.4, 0.4)
+
+[node name="Pit" parent="." instance=ExtResource("2_18ny8")]
+z_index = 3
+position = Vector2(2576, 350)
+scale = Vector2(0.329, 0.1)
+
+[node name="Pit2" parent="." instance=ExtResource("2_18ny8")]
+z_index = 3
+position = Vector2(3582, 447)
+scale = Vector2(0.329, 0.1)
+
+[node name="Pit3" parent="." instance=ExtResource("2_18ny8")]
+z_index = 3
+position = Vector2(5231, 350)
+scale = Vector2(5, 0.1)
+
+[node name="Wall" parent="." instance=ExtResource("3_52l4t")]
+z_index = 1
+position = Vector2(1113, 350)
+scale = Vector2(29.24, 0.5)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, 175)
+zoom = Vector2(2, 2)
+script = ExtResource("4_i35k0")
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("5_g1cjp")]
+
+[node name="Lightning Cloud" parent="." instance=ExtResource("6_schv6")]
+position = Vector2(2098, 178)
+scale = Vector2(0.16, 0.16)
+
+[node name="Lightning Cloud2" parent="." instance=ExtResource("6_schv6")]
+position = Vector2(2285, 180)
+scale = Vector2(0.16, 0.16)
+
+[node name="Lightning Cloud3" parent="." instance=ExtResource("6_schv6")]
+position = Vector2(2411, 180)
+scale = Vector2(0.16, 0.16)
+Yworld = true
+
+[node name="Lightning Cloud4" parent="." instance=ExtResource("6_schv6")]
+position = Vector2(4195, 180)
+scale = Vector2(0.16, 0.16)
+Yworld = true
+
+[node name="Checkpoint9" parent="." instance=ExtResource("8_u8v2x")]
+position = Vector2(1773, 270)
+scale = Vector2(0.2, 0.2)
+
+[node name="Checkpoint10" parent="." instance=ExtResource("8_u8v2x")]
+position = Vector2(2414, 270)
+scale = Vector2(0.2, 0.2)
+
+[node name="Checkpoint12" parent="." instance=ExtResource("8_u8v2x")]
+position = Vector2(4156, 270)
+scale = Vector2(0.2, 0.2)
+
+[node name="Checkpoint11" parent="." instance=ExtResource("8_u8v2x")]
+position = Vector2(3787, 78)
+scale = Vector2(0.2, 0.2)
+Yworld = true
+
+[node name="Fire" parent="." instance=ExtResource("9_ou8sk")]
+position = Vector2(621, 297)
+scale = Vector2(0.07, 0.07)
+
+[node name="Fire2" parent="." instance=ExtResource("9_ou8sk")]
+position = Vector2(662, 297)
+scale = Vector2(0.07, 0.07)
+
+[node name="Fire3" parent="." instance=ExtResource("9_ou8sk")]
+position = Vector2(705, 297)
+scale = Vector2(0.07, 0.07)
+
+[node name="Fire4" parent="." instance=ExtResource("9_ou8sk")]
+position = Vector2(891, 297)
+scale = Vector2(0.07, 0.07)
+
+[node name="Fire5" parent="." instance=ExtResource("9_ou8sk")]
+position = Vector2(932, 297)
+scale = Vector2(0.07, 0.07)
+
+[node name="Fire6" parent="." instance=ExtResource("9_ou8sk")]
+position = Vector2(975, 297)
+scale = Vector2(0.07, 0.07)
+
+[node name="Fire9" parent="." instance=ExtResource("9_ou8sk")]
+position = Vector2(1376, 297)
+scale = Vector2(0.07, 0.07)
+
+[node name="Fire10" parent="." instance=ExtResource("9_ou8sk")]
+position = Vector2(1417, 297)
+scale = Vector2(0.07, 0.07)
+
+[node name="Fire11" parent="." instance=ExtResource("9_ou8sk")]
+position = Vector2(1460, 297)
+scale = Vector2(0.07, 0.07)
+
+[node name="Wall8" parent="." instance=ExtResource("3_52l4t")]
+z_index = 1
+position = Vector2(2779, 350)
+scale = Vector2(3, 0.5)
+
+[node name="Wall25" parent="." instance=ExtResource("3_52l4t")]
+z_index = 1
+position = Vector2(2779, 350)
+scale = Vector2(3, 0.5)
+
+[node name="Wall26" parent="." instance=ExtResource("3_52l4t")]
+z_index = 1
+position = Vector2(4188, 350)
+scale = Vector2(3, 0.5)
+
+[node name="Spikes" parent="." instance=ExtResource("7_xelbu")]
+position = Vector2(2710, 99)
+rotation = 1.57084
+scale = Vector2(0.2, 0.2)
+skew = -4.31538e-05
+
+[node name="Spikes2" parent="." instance=ExtResource("7_xelbu")]
+position = Vector2(4569, 238)
+scale = Vector2(0.2, 0.2)
+skew = -4.31538e-05
+
+[node name="Spikes3" parent="." instance=ExtResource("7_xelbu")]
+position = Vector2(4809, 463)
+scale = Vector2(0.2, 0.2)
+skew = -4.31538e-05
+
+[node name="Spikes4" parent="." instance=ExtResource("7_xelbu")]
+position = Vector2(5121, 351)
+scale = Vector2(0.2, 0.2)
+skew = -4.31538e-05
+
+[node name="Spikes5" parent="." instance=ExtResource("7_xelbu")]
+position = Vector2(5449, 231)
+scale = Vector2(0.2, 0.2)
+skew = -4.31538e-05
+
+[node name="Spikes8" parent="." instance=ExtResource("7_xelbu")]
+position = Vector2(5818, 231)
+scale = Vector2(0.2, 0.2)
+skew = -4.31538e-05
+
+[node name="Spikes6" parent="." instance=ExtResource("7_xelbu")]
+position = Vector2(5481, 231)
+scale = Vector2(0.2, 0.2)
+skew = -4.31538e-05
+moveDownY = 238
+
+[node name="Spikes7" parent="." instance=ExtResource("7_xelbu")]
+position = Vector2(5746, 231)
+scale = Vector2(0.2, 0.2)
+skew = -4.31538e-05
+moveDownY = 238
+
+[node name="Spikes9" parent="." instance=ExtResource("7_xelbu")]
+position = Vector2(5890, 231)
+scale = Vector2(0.2, 0.2)
+skew = -4.31538e-05
+moveDownY = 238
+
+[node name="Wall9" parent="." instance=ExtResource("3_52l4t")]
+z_index = 1
+position = Vector2(2947, 196)
+scale = Vector2(2.12, 0.25)
+
+[node name="Wall20" parent="." instance=ExtResource("3_52l4t")]
+z_index = 1
+position = Vector2(3423, 445)
+scale = Vector2(2.12, 0.25)
+
+[node name="Wall21" parent="." instance=ExtResource("3_52l4t")]
+z_index = 1
+position = Vector2(3743, 445)
+scale = Vector2(2.12, 0.25)
+
+[node name="Wall11" parent="." instance=ExtResource("3_52l4t")]
+z_index = 1
+position = Vector2(2526, 259)
+scale = Vector2(1.08, 0.25)
+
+[node name="Wall13" parent="." instance=ExtResource("3_52l4t")]
+z_index = 1
+position = Vector2(2582, 184)
+scale = Vector2(1.08, 0.25)
+
+[node name="Wall16" parent="." instance=ExtResource("3_52l4t")]
+z_index = 1
+position = Vector2(3293, 186)
+scale = Vector2(1.08, 0.25)
+
+[node name="Wall18" parent="." instance=ExtResource("3_52l4t")]
+z_index = 1
+position = Vector2(3077, 280)
+scale = Vector2(1.08, 0.25)
+
+[node name="Wall19" parent="." instance=ExtResource("3_52l4t")]
+z_index = 1
+position = Vector2(3293, 362)
+scale = Vector2(1.08, 0.25)
+
+[node name="Wall10" parent="." instance=ExtResource("3_52l4t")]
+z_index = 1
+position = Vector2(3190, 9)
+scale = Vector2(13.688, 0.25)
+
+[node name="Wall27" parent="." instance=ExtResource("3_52l4t")]
+z_index = 1
+position = Vector2(5207, 111)
+scale = Vector2(23.928, 0.25)
+
+[node name="Wall28" parent="." instance=ExtResource("3_52l4t")]
+z_index = 1
+position = Vector2(5190, 583)
+scale = Vector2(23.928, 0.25)
+
+[node name="Fire12" parent="." instance=ExtResource("9_ou8sk")]
+position = Vector2(1502, 297)
+scale = Vector2(0.07, 0.07)
+
+[node name="Fire13" parent="." instance=ExtResource("9_ou8sk")]
+position = Vector2(1545, 297)
+scale = Vector2(0.07, 0.07)
+
+[node name="Fire14" parent="." instance=ExtResource("9_ou8sk")]
+position = Vector2(2688, 297)
+scale = Vector2(0.07, 0.07)
+
+[node name="Fire15" parent="." instance=ExtResource("9_ou8sk")]
+position = Vector2(2729, 297)
+scale = Vector2(0.07, 0.07)
+
+[node name="Fire16" parent="." instance=ExtResource("9_ou8sk")]
+position = Vector2(2772, 297)
+scale = Vector2(0.07, 0.07)
+
+[node name="Fire17" parent="." instance=ExtResource("9_ou8sk")]
+position = Vector2(2814, 297)
+scale = Vector2(0.07, 0.07)
+
+[node name="Fire18" parent="." instance=ExtResource("9_ou8sk")]
+position = Vector2(2857, 297)
+scale = Vector2(0.07, 0.07)
+
+[node name="Fire19" parent="." instance=ExtResource("9_ou8sk")]
+position = Vector2(3546, 53)
+rotation = 3.14159
+scale = Vector2(0.07, 0.07)
+
+[node name="Fire20" parent="." instance=ExtResource("9_ou8sk")]
+position = Vector2(3588, 53)
+rotation = 3.14159
+scale = Vector2(0.07, 0.07)
+
+[node name="Fire21" parent="." instance=ExtResource("9_ou8sk")]
+position = Vector2(3631, 53)
+rotation = 3.14159
+scale = Vector2(0.07, 0.07)
+
+[node name="Fire22" parent="." instance=ExtResource("9_ou8sk")]
+position = Vector2(4060, 627)
+scale = Vector2(0.07, 0.07)
+Yworld = true
+
+[node name="Fire23" parent="." instance=ExtResource("9_ou8sk")]
+position = Vector2(4102, 627)
+scale = Vector2(0.07, 0.07)
+Yworld = true
+
+[node name="Fire24" parent="." instance=ExtResource("9_ou8sk")]
+position = Vector2(4145, 627)
+scale = Vector2(0.07, 0.07)
+Yworld = true
+
+[node name="Fire25" parent="." instance=ExtResource("9_ou8sk")]
+position = Vector2(4187, 627)
+scale = Vector2(0.07, 0.07)
+Yworld = true
+
+[node name="Fire26" parent="." instance=ExtResource("9_ou8sk")]
+position = Vector2(4229, 627)
+scale = Vector2(0.07, 0.07)
+Yworld = true
+
+[node name="Fire27" parent="." instance=ExtResource("9_ou8sk")]
+position = Vector2(4272, 627)
+scale = Vector2(0.07, 0.07)
+Yworld = true
+
+[node name="Fire28" parent="." instance=ExtResource("9_ou8sk")]
+position = Vector2(4315, 627)
+scale = Vector2(0.07, 0.07)
+Yworld = true
+
+[node name="Fire29" parent="." instance=ExtResource("9_ou8sk")]
+position = Vector2(4357, 627)
+scale = Vector2(0.07, 0.07)
+Yworld = true
+
+[node name="Fire30" parent="." instance=ExtResource("9_ou8sk")]
+position = Vector2(4400, 627)
+scale = Vector2(0.07, 0.07)
+Yworld = true
+
+[node name="Fire31" parent="." instance=ExtResource("9_ou8sk")]
+position = Vector2(4442, 627)
+scale = Vector2(0.07, 0.07)
+Yworld = true
+
+[node name="Fire32" parent="." instance=ExtResource("9_ou8sk")]
+position = Vector2(4484, 627)
+scale = Vector2(0.07, 0.07)
+Yworld = true
+
+[node name="Fire33" parent="." instance=ExtResource("9_ou8sk")]
+position = Vector2(4527, 627)
+scale = Vector2(0.07, 0.07)
+Yworld = true
+
+[node name="Fire34" parent="." instance=ExtResource("9_ou8sk")]
+position = Vector2(4570, 627)
+scale = Vector2(0.07, 0.07)
+Yworld = true
+
+[node name="Fire35" parent="." instance=ExtResource("9_ou8sk")]
+position = Vector2(4612, 627)
+scale = Vector2(0.07, 0.07)
+Yworld = true
+
+[node name="Fire36" parent="." instance=ExtResource("9_ou8sk")]
+position = Vector2(4655, 627)
+scale = Vector2(0.07, 0.07)
+Yworld = true
+
+[node name="Fire37" parent="." instance=ExtResource("9_ou8sk")]
+position = Vector2(4697, 627)
+scale = Vector2(0.07, 0.07)
+Yworld = true
+
+[node name="Fire38" parent="." instance=ExtResource("9_ou8sk")]
+position = Vector2(4739, 627)
+scale = Vector2(0.07, 0.07)
+Yworld = true
+
+[node name="Fire39" parent="." instance=ExtResource("9_ou8sk")]
+position = Vector2(4782, 627)
+scale = Vector2(0.07, 0.07)
+Yworld = true
+
+[node name="Fire40" parent="." instance=ExtResource("9_ou8sk")]
+position = Vector2(4825, 627)
+scale = Vector2(0.07, 0.07)
+Yworld = true
+
+[node name="Fire41" parent="." instance=ExtResource("9_ou8sk")]
+position = Vector2(4867, 627)
+scale = Vector2(0.07, 0.07)
+Yworld = true
+
+[node name="Fire42" parent="." instance=ExtResource("9_ou8sk")]
+position = Vector2(4910, 627)
+scale = Vector2(0.07, 0.07)
+Yworld = true
+
+[node name="Fire43" parent="." instance=ExtResource("9_ou8sk")]
+position = Vector2(4952, 627)
+scale = Vector2(0.07, 0.07)
+Yworld = true
+
+[node name="Fire44" parent="." instance=ExtResource("9_ou8sk")]
+position = Vector2(4994, 627)
+scale = Vector2(0.07, 0.07)
+Yworld = true
+
+[node name="Fire45" parent="." instance=ExtResource("9_ou8sk")]
+position = Vector2(5037, 627)
+scale = Vector2(0.07, 0.07)
+Yworld = true
+
+[node name="Fire7" parent="." instance=ExtResource("9_ou8sk")]
+position = Vector2(1152, 297)
+scale = Vector2(0.07, 0.07)
+
+[node name="Fire8" parent="." instance=ExtResource("9_ou8sk")]
+position = Vector2(1193, 297)
+scale = Vector2(0.07, 0.07)
+
+[node name="Sign4" parent="." instance=ExtResource("10_mab4u")]
+position = Vector2(448, 298)
+scale = Vector2(0.15, 0.15)
+text = "Avoid the fires!"
+
+[node name="Sign5" parent="." instance=ExtResource("10_mab4u")]
+position = Vector2(1904, 298)
+scale = Vector2(0.15, 0.15)
+text = "Clouds are sometimes dangerous"
+
+[node name="Wall7" parent="." instance=ExtResource("3_52l4t")]
+position = Vector2(3037, 385)
+scale = Vector2(0.25, 3.72)
+
+[node name="Wall17" parent="." instance=ExtResource("3_52l4t")]
+position = Vector2(3333, 278)
+scale = Vector2(0.25, 3.72)
+
+[node name="Wall22" parent="." instance=ExtResource("3_52l4t")]
+position = Vector2(3487, 741)
+scale = Vector2(0.25, 3.72)
+
+[node name="Wall23" parent="." instance=ExtResource("3_52l4t")]
+position = Vector2(3744, 631)
+scale = Vector2(0.25, 3.72)
+
+[node name="Wall24" parent="." instance=ExtResource("3_52l4t")]
+position = Vector2(4056, 176)
+scale = Vector2(0.25, 3.72)
+
+[node name="Wall3" parent="." instance=ExtResource("3_52l4t")]
+position = Vector2(2702, 391)
+scale = Vector2(0.25, 1)
+
+[node name="Wall4" parent="." instance=ExtResource("3_52l4t")]
+position = Vector2(2702, 391)
+scale = Vector2(0.25, 1)
+
+[node name="Wall14" parent="." instance=ExtResource("3_52l4t")]
+position = Vector2(2870, 463)
+scale = Vector2(0.25, 1)
+
+[node name="Wall15" parent="." instance=ExtResource("3_52l4t")]
+position = Vector2(2870, 463)
+scale = Vector2(0.25, 1)
+
+[node name="Wall5" parent="." instance=ExtResource("3_52l4t")]
+position = Vector2(3262, 574)
+scale = Vector2(4.92, 0.25)
+
+[node name="Wall6" parent="." instance=ExtResource("3_52l4t")]
+position = Vector2(3076, 112)
+scale = Vector2(5.58001, 0.25)
+
+[node name="Wall29" parent="." instance=ExtResource("3_52l4t")]
+position = Vector2(6399, 350)
+scale = Vector2(5.58001, 0.25)
+
+[node name="Wall12" parent="." instance=ExtResource("3_52l4t")]
+position = Vector2(3945, 9)
+scale = Vector2(2.05999, 0.25)
+moveDownY = 436
+
+[node name="FinishLine" parent="." instance=ExtResource("11_2033s")]
+z_index = 1
+position = Vector2(6078, 350)
+scale = Vector2(0.35, 0.35)
+
+[node name="SoundPlayer" parent="." instance=ExtResource("12_vixu8")]
+
+[node name="VolumeControlMenu" parent="." instance=ExtResource("13_q0qkx")]
+z_index = 2
+scale = Vector2(0.5, 0.5)

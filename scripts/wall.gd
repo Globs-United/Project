@@ -1,10 +1,15 @@
 extends StaticBody2D
-"""
-var screen_size;
+var initialPosition;
+
+@export var moveDownY = 0;
+@export var moveUpY = 0;
+
+var time = 0;
 
 func _ready():
-	screen_size = get_viewport_rect().size
-	
-	position *= screen_size.y / 700;
-	scale    *= screen_size.y / 700;
-"""
+	initialPosition = position;
+
+func _process(delta: float) -> void:
+	if moveDownY || moveUpY:
+		position.y = initialPosition.y + sin(time * 0.7) * (moveDownY + moveUpY) * 0.5 + (moveDownY - moveUpY) * 0.5;
+		time += delta;

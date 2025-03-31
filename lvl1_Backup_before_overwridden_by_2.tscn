@@ -1,0 +1,45 @@
+[gd_scene load_steps=10 format=3 uid="uid://b8oeu3mc6eccr"]
+
+[ext_resource type="PackedScene" uid="uid://bqao8gba5f2ao" path="res://object_scenes/player.tscn" id="1_7qags"]
+[ext_resource type="PackedScene" uid="uid://dgwk5b1f52pic" path="res://object_scenes/pit.tscn" id="2_a2aqv"]
+[ext_resource type="PackedScene" uid="uid://dgy4yrqbl7mvj" path="res://object_scenes/wall.tscn" id="3_f1my6"]
+[ext_resource type="Script" uid="uid://w8iguxe1l24l" path="res://scripts/camera_2d.gd" id="4_ttyy5"]
+[ext_resource type="PackedScene" uid="uid://b7kig75wfp6de" path="res://object_scenes/background.tscn" id="5_7n1bj"]
+[ext_resource type="PackedScene" uid="uid://d4h8ppy0mb78w" path="res://object_scenes/lightning_cloud.tscn" id="6_spgc0"]
+[ext_resource type="PackedScene" uid="uid://dbjmiklp0s68j" path="res://object_scenes/spikes.tscn" id="7_0a31l"]
+[ext_resource type="PackedScene" uid="uid://wsjajdqhncat" path="res://object_scenes/fire.tscn" id="8_sqxdp"]
+[ext_resource type="PackedScene" uid="uid://xmbjavg0javs" path="res://object_scenes/finish_line.tscn" id="9_gj3xb"]
+
+[node name="Lvl 1" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_7qags")]
+position = Vector2(251, 148)
+
+[node name="Pit" parent="." instance=ExtResource("2_a2aqv")]
+position = Vector2(625, 350)
+scale = Vector2(0.8, 0.45)
+
+[node name="Wall" parent="." instance=ExtResource("3_f1my6")]
+position = Vector2(242, 350)
+scale = Vector2(5, 2)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, 350)
+script = ExtResource("4_ttyy5")
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("5_7n1bj")]
+
+[node name="Lightning Cloud" parent="." instance=ExtResource("6_spgc0")]
+position = Vector2(450, 55)
+scale = Vector2(0.2, 0.2)
+
+[node name="Spikes" parent="." instance=ExtResource("7_0a31l")]
+position = Vector2(890, 283)
+scale = Vector2(0.3, 0.3)
+
+[node name="Fire" parent="." instance=ExtResource("8_sqxdp")]
+position = Vector2(30, 203)
+scale = Vector2(0.1, 0.1)
+
+[node name="FinishLine" parent="." instance=ExtResource("9_gj3xb")]
+position = Vector2(-174, -34)

@@ -3,7 +3,21 @@ extends StaticBody2D
 @export var Yworld = false
 var player_within = false
 
-func _process(_delta: float) -> void:
+var initialPosition;
+
+@export var moveDownY = 0;
+@export var moveUpY = 0;
+
+var time = 0;
+
+func _ready():
+	initialPosition = position;
+
+func _process(delta: float) -> void:
+	if moveDownY || moveUpY:
+		position.y = initialPosition.y + sin(time * 1.5) * (moveDownY + moveUpY) * 0.5 + (moveDownY - moveUpY) * 0.5;
+		time += delta;
+
 	if player_within:
 		get_tree().call_group("player", "_on_being_hit")
 	#if Yworld != $Sprite2D.flip_v:
