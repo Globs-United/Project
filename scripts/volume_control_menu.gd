@@ -2,6 +2,7 @@ extends Control
 
 @export var tutorial = true
 var prev_zoom
+var change = true
 
 func _ready() -> void:
 	$Music.value = get_node("../SoundPlayer").music_volume
@@ -11,8 +12,9 @@ func _ready() -> void:
 
 
 func _process(_delta: float) -> void:
-	if prev_zoom != get_node("../Camera2D").zoom.x:
-		scale *= prev_zoom / get_node("../Camera2D").zoom.x
+	if prev_zoom != get_node("../Camera2D").zoom.x  && change:
+		scale *= 1.9
+		change = false
 	position = get_node("../Camera2D").position
 	if tutorial:
 		$RichTextLabel.show()
