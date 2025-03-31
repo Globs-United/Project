@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://gkkpg0gxwa8j"]
+
+[ext_resource type="AudioStream" uid="uid://ciolmf8opxvae" path="res://Light Theme.mp3" id="1_nla24"]
+[ext_resource type="Script" uid="uid://c13ol1yblpr7a" path="res://scripts/sound_player.gd" id="2_nxpu7"]
+[ext_resource type="AudioStream" uid="uid://diwnfkjnfaqfa" path="res://City Traffic Background.mp3" id="3_scumx"]
+[ext_resource type="AudioStream" uid="uid://cl5pel4ordpp3" path="res://Dark Theme.mp3" id="4_idey8"]
+
+[node name="SoundPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_nla24")
+volume_db = -10.0
+parameters/looping = true
+script = ExtResource("2_nxpu7")
+
+[node name="Traffic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_scumx")
+parameters/looping = true
+
+[node name="Dark" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_idey8")
+parameters/looping = true
