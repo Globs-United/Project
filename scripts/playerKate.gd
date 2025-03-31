@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 const SPEED = 250.0;
 const FRICTION = 30.0;
-const JUMP_VELOCITY = -340.0;
+const JUMP_VELOCITY = -345.0;
 const TERMINAL_VELOCITY = 500
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity");
 
@@ -114,6 +114,12 @@ func _process(delta: float) -> void:
 		playerstate = "jump"
 	
 	position += velocity * delta;
+	
+	
+	if position.x < scale.x * 110:
+		position.x = scale.x * 110;
+	elif (position.y > 750 && !Yworld) || (position.y < -50 && Yworld):
+		death();
 
 
 

@@ -74,7 +74,7 @@ rotation = -1.5708
 scale = Vector2(0.2, 0.2)
 
 [node name="Spikes11" parent="." instance=ExtResource("7_t5h3c")]
-position = Vector2(4304, 175)
+position = Vector2(4304, 166)
 rotation = -1.5708
 scale = Vector2(0.2, 0.2)
 
@@ -139,7 +139,7 @@ position = Vector2(3963, 153)
 scale = Vector2(0.2, 0.2)
 
 [node name="Spikes10" parent="." instance=ExtResource("7_t5h3c")]
-position = Vector2(4382, 255)
+position = Vector2(4382, 246)
 scale = Vector2(0.2, 0.2)
 
 [node name="Spikes13" parent="." instance=ExtResource("7_t5h3c")]
