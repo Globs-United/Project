@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cill11k6nch8o"]
+[gd_scene load_steps=14 format=3 uid="uid://cill11k6nch8o"]
 
 [ext_resource type="PackedScene" uid="uid://bqao8gba5f2ao" path="res://object_scenes/player.tscn" id="1_aq45b"]
 [ext_resource type="PackedScene" uid="uid://dgwk5b1f52pic" path="res://object_scenes/pit.tscn" id="2_jukch"]
@@ -11,17 +11,20 @@
 [ext_resource type="PackedScene" uid="uid://cs2y2xdm75fed" path="res://checkpoint.tscn" id="8_vcnes"]
 [ext_resource type="PackedScene" uid="uid://dh8i38af1uaom" path="res://object_scenes/sign.tscn" id="9_jukch"]
 [ext_resource type="PackedScene" uid="uid://xmbjavg0javs" path="res://object_scenes/finish_line.tscn" id="11_3pm5q"]
+[ext_resource type="PackedScene" uid="uid://gkkpg0gxwa8j" path="res://object_scenes/sound_player.tscn" id="12_nujma"]
+[ext_resource type="PackedScene" uid="uid://cqab7aomtcrlf" path="res://object_scenes/volume_control_menu.tscn" id="13_t5h3c"]
 
 [node name="Lvl 2" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_aq45b")]
-z_index = 3
+z_index = 2
 position = Vector2(209, 175)
 scale = Vector2(0.4, 0.4)
 
 [node name="Pit" parent="." instance=ExtResource("2_jukch")]
-position = Vector2(4870, 350)
-scale = Vector2(0.4, 0.1)
+z_index = 3
+position = Vector2(4859, 350)
+scale = Vector2(0.329, 0.1)
 oneWay = true
 
 [node name="Wall" parent="." instance=ExtResource("3_vcnes")]
@@ -210,7 +213,7 @@ position = Vector2(1064, 101)
 scale = Vector2(0.25, 2.64)
 
 [node name="Wall3" parent="." instance=ExtResource("3_vcnes")]
-position = Vector2(598, 208)
+position = Vector2(598, 191)
 scale = Vector2(0.25, 1)
 
 [node name="Wall4" parent="." instance=ExtResource("3_vcnes")]
@@ -324,3 +327,9 @@ scale = Vector2(0.900002, 0.25)
 z_index = 1
 position = Vector2(6078, 350)
 scale = Vector2(0.35, 0.35)
+
+[node name="SoundPlayer" parent="." instance=ExtResource("12_nujma")]
+
+[node name="VolumeControlMenu" parent="." instance=ExtResource("13_t5h3c")]
+z_index = 2
+scale = Vector2(0.5, 0.5)
