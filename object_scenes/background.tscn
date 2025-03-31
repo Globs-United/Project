@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bdxuvitu5w5sb" path="res://sprites/City1_tiled.png" id="4_t7lll"]
 
 [node name="ParallaxBackground" type="ParallaxBackground"]
-scroll_base_scale = Vector2(0.7, 1)
+scroll_base_scale = Vector2(0.7, 0)
 scroll_limit_begin = Vector2(-1e+09, 0)
 scroll_limit_end = Vector2(1e+08, 0)
 
