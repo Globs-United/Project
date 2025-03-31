@@ -47,7 +47,7 @@ func _physics_process(delta: float) -> void:
 	position.y += moveYNext;
 	moveYNext = 0;
 	
-	if Yworld != $AnimatedSprite2D.flip_v:
+	if Yworld != (scale.y < 0):
 		Yworld = !Yworld
 		change_world()
 	if health <= 0 && !death_lock:
@@ -102,8 +102,8 @@ func _physics_process(delta: float) -> void:
 		else:
 			velocity.y = 0;
 			is_on_floor_custom = true;
-			if collision_info.get_collider().hasMoved:
-				moveYNext += collision_info.get_collider().hasMoved;
+			#if collision_info.get_collider().hasMoved:
+				#moveYNext += collision_info.get_collider().hasMoved;
 			
 	# replace move and slide so I can handle the collisions manually and add bouncing
 	
@@ -162,10 +162,11 @@ func playeranim(delta):
 func change_world():
 	print("Player changing world")
 	Yworld = !Yworld
-	$AnimatedSprite2D.flip_v = !($AnimatedSprite2D.flip_v)
+	#$AnimatedSprite2D.flip_v = !($AnimatedSprite2D.flip_v)
 	#replaced flipping y of self in case it changed the player's position in the game
-	$AnimatedSprite2D.position.y *= -1
-	$CollisionPolygon2D.position.y *= -1
+	#$AnimatedSprite2D.position.y *= -1
+	#$CollisionPolygon2D.position.y *= -1
+	scale.y *= -1;
 	$VisibleOnScreenNotifier2D.position.y *= -1
 	gravity *= -1;
 	#jump velocity "flipped" in jump_velocity()
@@ -207,6 +208,7 @@ func _on_being_hit():
 func _on_check_point(newPos, newY):
 	initialPosition = newPos;
 	initialWorld = newY;
+	Yworld = newY;
 
 
 

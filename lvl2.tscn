@@ -18,7 +18,7 @@
 
 [node name="Player" parent="." instance=ExtResource("1_aq45b")]
 z_index = 2
-position = Vector2(3792, 379)
+position = Vector2(3763, 300)
 scale = Vector2(0.4, 0.4)
 
 [node name="Pit" parent="." instance=ExtResource("2_jukch")]
@@ -28,12 +28,12 @@ scale = Vector2(0.329, 0.1)
 
 [node name="Pit2" parent="." instance=ExtResource("2_jukch")]
 z_index = 3
-position = Vector2(3582, 447)
-scale = Vector2(0.329, 0.1)
+position = Vector2(3628, 447)
+scale = Vector2(0.569, 0.1)
 
 [node name="Pit3" parent="." instance=ExtResource("2_jukch")]
 z_index = 3
-position = Vector2(5231, 350)
+position = Vector2(5535, 350)
 scale = Vector2(5, 0.1)
 
 [node name="Wall" parent="." instance=ExtResource("3_vcnes")]
@@ -62,7 +62,7 @@ scale = Vector2(0.16, 0.16)
 Yworld = true
 
 [node name="Lightning Cloud4" parent="." instance=ExtResource("6_nujma")]
-position = Vector2(4195, 180)
+position = Vector2(4499, 180)
 scale = Vector2(0.16, 0.16)
 Yworld = true
 
@@ -75,11 +75,11 @@ position = Vector2(2414, 270)
 scale = Vector2(0.2, 0.2)
 
 [node name="Checkpoint12" parent="." instance=ExtResource("8_vcnes")]
-position = Vector2(4156, 270)
+position = Vector2(4460, 270)
 scale = Vector2(0.2, 0.2)
 
 [node name="Checkpoint11" parent="." instance=ExtResource("8_vcnes")]
-position = Vector2(3787, 89)
+position = Vector2(3763, 89)
 scale = Vector2(0.2, 0.2)
 Yworld = true
 
@@ -131,7 +131,7 @@ scale = Vector2(3, 0.5)
 
 [node name="Wall26" parent="." instance=ExtResource("3_vcnes")]
 z_index = 1
-position = Vector2(4188, 350)
+position = Vector2(4492, 350)
 scale = Vector2(3, 0.5)
 
 [node name="Spikes" parent="." instance=ExtResource("7_t5h3c")]
@@ -141,44 +141,44 @@ scale = Vector2(0.2, 0.2)
 skew = -4.31538e-05
 
 [node name="Spikes2" parent="." instance=ExtResource("7_t5h3c")]
-position = Vector2(4569, 238)
+position = Vector2(4873, 238)
 scale = Vector2(0.2, 0.2)
 skew = -4.31538e-05
 
 [node name="Spikes3" parent="." instance=ExtResource("7_t5h3c")]
-position = Vector2(4809, 463)
+position = Vector2(5113, 463)
 scale = Vector2(0.2, 0.2)
 skew = -4.31538e-05
 
 [node name="Spikes4" parent="." instance=ExtResource("7_t5h3c")]
-position = Vector2(5121, 351)
+position = Vector2(5425, 351)
 scale = Vector2(0.2, 0.2)
 skew = -4.31538e-05
 
 [node name="Spikes5" parent="." instance=ExtResource("7_t5h3c")]
-position = Vector2(5449, 231)
+position = Vector2(5753, 231)
 scale = Vector2(0.2, 0.2)
 skew = -4.31538e-05
 
 [node name="Spikes8" parent="." instance=ExtResource("7_t5h3c")]
-position = Vector2(5818, 231)
+position = Vector2(6122, 231)
 scale = Vector2(0.2, 0.2)
 skew = -4.31538e-05
 
 [node name="Spikes6" parent="." instance=ExtResource("7_t5h3c")]
-position = Vector2(5481, 231)
+position = Vector2(5785, 231)
 scale = Vector2(0.2, 0.2)
 skew = -4.31538e-05
 moveDownY = 238
 
 [node name="Spikes7" parent="." instance=ExtResource("7_t5h3c")]
-position = Vector2(5746, 231)
+position = Vector2(6050, 231)
 scale = Vector2(0.2, 0.2)
 skew = -4.31538e-05
 moveDownY = 238
 
 [node name="Spikes9" parent="." instance=ExtResource("7_t5h3c")]
-position = Vector2(5890, 231)
+position = Vector2(6194, 231)
 scale = Vector2(0.2, 0.2)
 skew = -4.31538e-05
 moveDownY = 238
@@ -200,8 +200,8 @@ scale = Vector2(2.12, 0.25)
 
 [node name="Wall21" parent="." instance=ExtResource("3_vcnes")]
 z_index = 1
-position = Vector2(3743, 445)
-scale = Vector2(2.12, 0.25)
+position = Vector2(3942, 445)
+scale = Vector2(4.32001, 0.25)
 
 [node name="Wall11" parent="." instance=ExtResource("3_vcnes")]
 z_index = 1
@@ -240,17 +240,17 @@ scale = Vector2(1.08, 0.25)
 
 [node name="Wall10" parent="." instance=ExtResource("3_vcnes")]
 z_index = 1
-position = Vector2(3190, 20)
-scale = Vector2(13.688, 0.25)
+position = Vector2(3333, 20)
+scale = Vector2(17.008, 0.25)
 
 [node name="Wall27" parent="." instance=ExtResource("3_vcnes")]
 z_index = 1
-position = Vector2(5207, 111)
+position = Vector2(5511, 111)
 scale = Vector2(23.928, 0.25)
 
 [node name="Wall28" parent="." instance=ExtResource("3_vcnes")]
 z_index = 1
-position = Vector2(5190, 583)
+position = Vector2(5494, 583)
 scale = Vector2(23.928, 0.25)
 
 [node name="Fire12" parent="." instance=ExtResource("8_ux455")]
@@ -273,6 +273,18 @@ scale = Vector2(0.07, 0.07)
 position = Vector2(2772, 297)
 scale = Vector2(0.07, 0.07)
 
+[node name="Fire46" parent="." instance=ExtResource("8_ux455")]
+position = Vector2(3886, 401)
+scale = Vector2(0.07, 0.07)
+
+[node name="Fire47" parent="." instance=ExtResource("8_ux455")]
+position = Vector2(3927, 401)
+scale = Vector2(0.07, 0.07)
+
+[node name="Fire48" parent="." instance=ExtResource("8_ux455")]
+position = Vector2(3970, 401)
+scale = Vector2(0.07, 0.07)
+
 [node name="Fire17" parent="." instance=ExtResource("8_ux455")]
 position = Vector2(2814, 297)
 scale = Vector2(0.07, 0.07)
@@ -282,137 +294,137 @@ position = Vector2(2857, 297)
 scale = Vector2(0.07, 0.07)
 
 [node name="Fire19" parent="." instance=ExtResource("8_ux455")]
-position = Vector2(3546, 64)
+position = Vector2(3522, 64)
 rotation = 3.14159
 scale = Vector2(0.07, 0.07)
 
 [node name="Fire20" parent="." instance=ExtResource("8_ux455")]
-position = Vector2(3588, 64)
+position = Vector2(3564, 64)
 rotation = 3.14159
 scale = Vector2(0.07, 0.07)
 
 [node name="Fire21" parent="." instance=ExtResource("8_ux455")]
-position = Vector2(3631, 64)
+position = Vector2(3607, 64)
 rotation = 3.14159
 scale = Vector2(0.07, 0.07)
 
 [node name="Fire22" parent="." instance=ExtResource("8_ux455")]
-position = Vector2(4060, 627)
+position = Vector2(4364, 627)
 scale = Vector2(0.07, 0.07)
 Yworld = true
 
 [node name="Fire23" parent="." instance=ExtResource("8_ux455")]
-position = Vector2(4102, 627)
+position = Vector2(4406, 627)
 scale = Vector2(0.07, 0.07)
 Yworld = true
 
 [node name="Fire24" parent="." instance=ExtResource("8_ux455")]
-position = Vector2(4145, 627)
+position = Vector2(4449, 627)
 scale = Vector2(0.07, 0.07)
 Yworld = true
 
 [node name="Fire25" parent="." instance=ExtResource("8_ux455")]
-position = Vector2(4187, 627)
+position = Vector2(4491, 627)
 scale = Vector2(0.07, 0.07)
 Yworld = true
 
 [node name="Fire26" parent="." instance=ExtResource("8_ux455")]
-position = Vector2(4229, 627)
+position = Vector2(4533, 627)
 scale = Vector2(0.07, 0.07)
 Yworld = true
 
 [node name="Fire27" parent="." instance=ExtResource("8_ux455")]
-position = Vector2(4272, 627)
+position = Vector2(4576, 627)
 scale = Vector2(0.07, 0.07)
 Yworld = true
 
 [node name="Fire28" parent="." instance=ExtResource("8_ux455")]
-position = Vector2(4315, 627)
+position = Vector2(4619, 627)
 scale = Vector2(0.07, 0.07)
 Yworld = true
 
 [node name="Fire29" parent="." instance=ExtResource("8_ux455")]
-position = Vector2(4357, 627)
+position = Vector2(4661, 627)
 scale = Vector2(0.07, 0.07)
 Yworld = true
 
 [node name="Fire30" parent="." instance=ExtResource("8_ux455")]
-position = Vector2(4400, 627)
+position = Vector2(4704, 627)
 scale = Vector2(0.07, 0.07)
 Yworld = true
 
 [node name="Fire31" parent="." instance=ExtResource("8_ux455")]
-position = Vector2(4442, 627)
+position = Vector2(4746, 627)
 scale = Vector2(0.07, 0.07)
 Yworld = true
 
 [node name="Fire32" parent="." instance=ExtResource("8_ux455")]
-position = Vector2(4484, 627)
+position = Vector2(4788, 627)
 scale = Vector2(0.07, 0.07)
 Yworld = true
 
 [node name="Fire33" parent="." instance=ExtResource("8_ux455")]
-position = Vector2(4527, 627)
+position = Vector2(4831, 627)
 scale = Vector2(0.07, 0.07)
 Yworld = true
 
 [node name="Fire34" parent="." instance=ExtResource("8_ux455")]
-position = Vector2(4570, 627)
+position = Vector2(4874, 627)
 scale = Vector2(0.07, 0.07)
 Yworld = true
 
 [node name="Fire35" parent="." instance=ExtResource("8_ux455")]
-position = Vector2(4612, 627)
+position = Vector2(4916, 627)
 scale = Vector2(0.07, 0.07)
 Yworld = true
 
 [node name="Fire36" parent="." instance=ExtResource("8_ux455")]
-position = Vector2(4655, 627)
+position = Vector2(4959, 627)
 scale = Vector2(0.07, 0.07)
 Yworld = true
 
 [node name="Fire37" parent="." instance=ExtResource("8_ux455")]
-position = Vector2(4697, 627)
+position = Vector2(5001, 627)
 scale = Vector2(0.07, 0.07)
 Yworld = true
 
 [node name="Fire38" parent="." instance=ExtResource("8_ux455")]
-position = Vector2(4739, 627)
+position = Vector2(5043, 627)
 scale = Vector2(0.07, 0.07)
 Yworld = true
 
 [node name="Fire39" parent="." instance=ExtResource("8_ux455")]
-position = Vector2(4782, 627)
+position = Vector2(5086, 627)
 scale = Vector2(0.07, 0.07)
 Yworld = true
 
 [node name="Fire40" parent="." instance=ExtResource("8_ux455")]
-position = Vector2(4825, 627)
+position = Vector2(5129, 627)
 scale = Vector2(0.07, 0.07)
 Yworld = true
 
 [node name="Fire41" parent="." instance=ExtResource("8_ux455")]
-position = Vector2(4867, 627)
+position = Vector2(5171, 627)
 scale = Vector2(0.07, 0.07)
 Yworld = true
 
 [node name="Fire42" parent="." instance=ExtResource("8_ux455")]
-position = Vector2(4910, 627)
+position = Vector2(5214, 627)
 scale = Vector2(0.07, 0.07)
 Yworld = true
 
 [node name="Fire43" parent="." instance=ExtResource("8_ux455")]
-position = Vector2(4952, 627)
+position = Vector2(5256, 627)
 scale = Vector2(0.07, 0.07)
 Yworld = true
 
 [node name="Fire44" parent="." instance=ExtResource("8_ux455")]
-position = Vector2(4994, 627)
+position = Vector2(5298, 627)
 scale = Vector2(0.07, 0.07)
 Yworld = true
 
 [node name="Fire45" parent="." instance=ExtResource("8_ux455")]
-position = Vector2(5037, 627)
+position = Vector2(5341, 627)
 scale = Vector2(0.07, 0.07)
 Yworld = true
 
@@ -459,11 +471,11 @@ position = Vector2(1461, 430)
 scale = Vector2(0.25, 3.72)
 
 [node name="Wall23" parent="." instance=ExtResource("3_vcnes")]
-position = Vector2(3744, 631)
+position = Vector2(3744, 611)
 scale = Vector2(0.25, 3.72)
 
 [node name="Wall24" parent="." instance=ExtResource("3_vcnes")]
-position = Vector2(4056, 187)
+position = Vector2(4360, 187)
 scale = Vector2(0.25, 3.72)
 
 [node name="Wall3" parent="." instance=ExtResource("3_vcnes")]
@@ -491,17 +503,17 @@ position = Vector2(3076, 112)
 scale = Vector2(5.58001, 0.25)
 
 [node name="Wall29" parent="." instance=ExtResource("3_vcnes")]
-position = Vector2(6399, 350)
+position = Vector2(6703, 350)
 scale = Vector2(5.58001, 0.25)
 
 [node name="Wall12" parent="." instance=ExtResource("3_vcnes")]
-position = Vector2(3945, 20)
+position = Vector2(4249, 20)
 scale = Vector2(2.05999, 0.25)
 moveDownY = 436
 
 [node name="FinishLine" parent="." instance=ExtResource("11_3pm5q")]
 z_index = 1
-position = Vector2(6078, 350)
+position = Vector2(6382, 350)
 scale = Vector2(0.35, 0.35)
 
 [node name="SoundPlayer" parent="." instance=ExtResource("12_nujma")]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bgvo0sua3mcnq"]
+[gd_scene load_steps=12 format=3 uid="uid://bgvo0sua3mcnq"]
 
 [ext_resource type="PackedScene" uid="uid://dgwk5b1f52pic" path="res://object_scenes/pit.tscn" id="2_ok8r0"]
 [ext_resource type="PackedScene" uid="uid://bqao8gba5f2ao" path="res://object_scenes/player.tscn" id="3_audra"]
@@ -6,9 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b7kig75wfp6de" path="res://object_scenes/background.tscn" id="5_audra"]
 [ext_resource type="Script" uid="uid://w8iguxe1l24l" path="res://scripts/camera_2d.gd" id="5_ok8r0"]
 [ext_resource type="PackedScene" uid="uid://dbjmiklp0s68j" path="res://object_scenes/spikes.tscn" id="6_audra"]
-[ext_resource type="PackedScene" uid="uid://d4h8ppy0mb78w" path="res://object_scenes/lightning_cloud.tscn" id="6_x7kom"]
 [ext_resource type="PackedScene" uid="uid://cs2y2xdm75fed" path="res://checkpoint.tscn" id="8_lpail"]
-[ext_resource type="PackedScene" uid="uid://wsjajdqhncat" path="res://object_scenes/fire.tscn" id="8_qoovb"]
 [ext_resource type="PackedScene" uid="uid://xmbjavg0javs" path="res://object_scenes/finish_line.tscn" id="9_1w0mb"]
 [ext_resource type="PackedScene" uid="uid://dh8i38af1uaom" path="res://object_scenes/sign.tscn" id="10_mfdtg"]
 [ext_resource type="PackedScene" uid="uid://gkkpg0gxwa8j" path="res://object_scenes/sound_player.tscn" id="12_fgl13"]
@@ -44,10 +42,6 @@ script = ExtResource("5_ok8r0")
 smallScreen = true
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("5_audra")]
-
-[node name="Lightning Cloud" parent="." instance=ExtResource("6_x7kom")]
-position = Vector2(129, -289)
-scale = Vector2(0.16, 0.16)
 
 [node name="Spikes" parent="." instance=ExtResource("6_audra")]
 position = Vector2(2344, 301)
@@ -167,10 +161,6 @@ scale = Vector2(0.2, 0.2)
 position = Vector2(4302, 629)
 rotation = 2.35619
 scale = Vector2(0.2, 0.2)
-
-[node name="Fire" parent="." instance=ExtResource("8_qoovb")]
-position = Vector2(345, -370)
-scale = Vector2(0.07, 0.07)
 
 [node name="Sign" parent="." instance=ExtResource("10_mfdtg")]
 position = Vector2(208, 304)
