@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=3 uid="uid://7g1pbhq3bkpw"]
+
+[ext_resource type="PackedScene" uid="uid://dgwk5b1f52pic" path="res://object_scenes/pit.tscn" id="1_mym2s"]
+[ext_resource type="PackedScene" uid="uid://bqao8gba5f2ao" path="res://object_scenes/player.tscn" id="1_pb8n0"]
+[ext_resource type="PackedScene" uid="uid://dgy4yrqbl7mvj" path="res://object_scenes/wall.tscn" id="2_ist6a"]
+[ext_resource type="PackedScene" uid="uid://xmbjavg0javs" path="res://object_scenes/finish_line.tscn" id="4_bngp7"]
+[ext_resource type="PackedScene" uid="uid://dh8i38af1uaom" path="res://object_scenes/sign.tscn" id="5_pl6lj"]
+[ext_resource type="PackedScene" uid="uid://b7kig75wfp6de" path="res://object_scenes/background.tscn" id="6_lqghc"]
+[ext_resource type="Script" uid="uid://w8iguxe1l24l" path="res://scripts/camera_2d.gd" id="7_dn0ov"]
+
+[node name="WinnerScreen" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_pb8n0")]
+position = Vector2(389, 213)
+
+[node name="Pit" parent="." instance=ExtResource("1_mym2s")]
+position = Vector2(-170, 350)
+scale = Vector2(1, 0.5)
+
+[node name="Wall" parent="." instance=ExtResource("2_ist6a")]
+position = Vector2(960, 350)
+scale = Vector2(20, 2)
+
+[node name="Pit2" parent="." instance=ExtResource("1_mym2s")]
+position = Vector2(3720, 350)
+scale = Vector2(10, 0.5)
+
+[node name="FinishLine" parent="." instance=ExtResource("4_bngp7")]
+position = Vector2(4200, 350)
+scale = Vector2(0.5, 0.5)
+
+[node name="Sign" parent="." instance=ExtResource("5_pl6lj")]
+position = Vector2(987, 194)
+scale = Vector2(0.3, 0.3)
+text = "You Win! Traverse the pit to finally stay with your bretheren :)"
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("6_lqghc")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, 350)
+script = ExtResource("7_dn0ov")
+
+[node name="Wall2" parent="." instance=ExtResource("2_ist6a")]
+position = Vector2(4100, 350)
+scale = Vector2(5, 2)
