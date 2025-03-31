@@ -1,15 +1,18 @@
 extends Control
 
 @export var tutorial = true
-#var cam : PackedScene = preload("res://object_scenes/camera_2d.tscn")
+var prev_zoom
 
 func _ready() -> void:
 	$Music.value = get_node("../SoundPlayer").music_volume
 	$Noise.value = get_node("../SoundPlayer").noise_volume
 	$RichTextLabel.hide()
+	prev_zoom = get_node("../Camera2D").zoom.x
 
 
 func _process(_delta: float) -> void:
+	if prev_zoom != get_node("../Camera2D").zoom.x:
+		scale *= prev_zoom / get_node("../Camera2D").zoom.x
 	position = get_node("../Camera2D").position
 	if tutorial:
 		$RichTextLabel.show()

@@ -41,7 +41,7 @@ func _ready() -> void:
 	initialPosition = position;
 	initialWorld = Yworld;
 
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	if Yworld != $AnimatedSprite2D.flip_v:
 		Yworld = !Yworld
 		change_world()
