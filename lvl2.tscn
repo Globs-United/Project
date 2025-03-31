@@ -470,8 +470,8 @@ position = Vector2(3744, 611)
 scale = Vector2(0.25, 3.72)
 
 [node name="Wall24" parent="." instance=ExtResource("3_vcnes")]
-position = Vector2(4360, 187)
-scale = Vector2(0.25, 3.72)
+position = Vector2(4360, -117)
+scale = Vector2(0.25, 10.2)
 
 [node name="Wall3" parent="." instance=ExtResource("3_vcnes")]
 position = Vector2(2702, 391)
