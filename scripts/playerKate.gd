@@ -11,6 +11,7 @@ var initialWorld;
 @export var initialHealth = 1;
 
 var is_on_floor_custom = false;
+var was_on_floor_custom = false;
 var jump_check = false
 var prepareJump = false;
 var jumpTime = 0;
@@ -27,6 +28,7 @@ var can_be_hit = true
 @export var Yworld = false
 var hasTraveled = false;
 
+var moveYNext = 0;
 
 # I added playerKateOld.gd in case you want to look at some of your old code to recover it
 
@@ -42,6 +44,9 @@ func _ready() -> void:
 	initialWorld = Yworld;
 
 func _physics_process(delta: float) -> void:
+	position.y += moveYNext;
+	moveYNext = 0;
+	
 	if Yworld != $AnimatedSprite2D.flip_v:
 		Yworld = !Yworld
 		change_world()
@@ -58,7 +63,7 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor_custom:
 		velocity.y += gravity * delta
 		#double checks if jumping
-		if -1*sign(gravity) == sign(velocity.y):
+		if velocity.y && !was_on_floor_custom && jumpTime < 0.9:
 			playerstate = "jump"
 		
 	#I moved the horizontal flip so it applies on all nodes, not just walking
@@ -67,9 +72,7 @@ func _physics_process(delta: float) -> void:
 		
 	#Idle / Walk animations
 	if playerstate != "jump":# || $AnimatedSprite2D.frame <= 2:
-		if prepareJump:
-			playerstate = "jump"
-		elif abs(velocity.x) < 0.2 and abs(velocity.y) < 0.2:
+		if abs(velocity.x) < 0.2 and abs(velocity.y) < 0.2:
 			playerstate = "idle"
 		elif is_on_floor_custom:
 			playerstate = "walk"
@@ -89,6 +92,7 @@ func _physics_process(delta: float) -> void:
 	
 	# Handle collisions
 	var collision_info = move_and_collide(velocity * delta);
+	was_on_floor_custom = is_on_floor_custom;
 	is_on_floor_custom = false;
 	if collision_info:
 		var velocityTemp = velocity.bounce(collision_info.get_normal());
@@ -98,6 +102,8 @@ func _physics_process(delta: float) -> void:
 		else:
 			velocity.y = 0;
 			is_on_floor_custom = true;
+			if collision_info.get_collider().hasMoved:
+				moveYNext += collision_info.get_collider().hasMoved;
 			
 	# replace move and slide so I can handle the collisions manually and add bouncing
 	
@@ -134,21 +140,18 @@ func playeranim(delta):
 	elif playerstate == "jump":
 		$AnimatedSprite2D.play("jump" + animation_name_modifier)
 		#Make the animation frame be based off of y velocity instead of time.
-		if !prepareJump:
-			if jumpTime <= jumpTimeMax * 0.9:
-				var jump_modifier = 2.95 if Yworld else -2.95;
-				$AnimatedSprite2D.frame = min(int(5 + jump_modifier * velocity.y / JUMP_VELOCITY), 7);
-				jumpFrame = 0;
-			else:
-				jumpFrame = max(jumpFrame, 8);
-				if jumpFrame < 12:
-					$AnimatedSprite2D.frame = int(jumpFrame);
-					jumpFrame += delta * 10;
-				else:
-					jumpFrame = 0;
-					playerstate = "idle";
-		else:
+		if jumpTime <= jumpTimeMax * 0.3:
+			var jump_modifier = 2.95 if Yworld else -2.95;
+			$AnimatedSprite2D.frame = min(int(5 + jump_modifier * velocity.y / JUMP_VELOCITY), 7);
 			jumpFrame = 0;
+		else:
+			jumpFrame = max(jumpFrame, 8);
+			if jumpFrame < 12:
+				$AnimatedSprite2D.frame = int(jumpFrame);
+				jumpFrame += delta * 10;
+			else:
+				jumpFrame = 0;
+				playerstate = "idle";
 	elif playerstate == "death":
 		$AnimatedSprite2D.play("death" + animation_name_modifier)
 

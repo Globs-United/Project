@@ -18,7 +18,7 @@
 
 [node name="Player" parent="." instance=ExtResource("1_aq45b")]
 z_index = 2
-position = Vector2(2422, 88)
+position = Vector2(3792, 379)
 scale = Vector2(0.4, 0.4)
 
 [node name="Pit" parent="." instance=ExtResource("2_jukch")]

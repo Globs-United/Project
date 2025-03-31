@@ -129,7 +129,7 @@ rotation = 1.5708
 scale = Vector2(0.2, 0.2)
 
 [node name="Spikes17" parent="." instance=ExtResource("6_audra")]
-position = Vector2(4506, 691)
+position = Vector2(4378, 611)
 rotation = 1.5708
 scale = Vector2(0.2, 0.2)
 
@@ -159,12 +159,12 @@ rotation = 3.14159
 scale = Vector2(0.2, 0.2)
 
 [node name="Spikes15" parent="." instance=ExtResource("6_audra")]
-position = Vector2(4287, 476)
+position = Vector2(4239, 476)
 rotation = 3.14159
 scale = Vector2(0.2, 0.2)
 
 [node name="Spikes16" parent="." instance=ExtResource("6_audra")]
-position = Vector2(4350, 629)
+position = Vector2(4302, 629)
 rotation = 2.35619
 scale = Vector2(0.2, 0.2)
 
@@ -300,11 +300,11 @@ position = Vector2(4697, 547)
 scale = Vector2(2.15999, 0.25)
 
 [node name="Wall23" parent="." instance=ExtResource("4_x7kom")]
-position = Vector2(4626, 432)
+position = Vector2(4578, 432)
 scale = Vector2(2.44, 0.25)
 
 [node name="Wall26" parent="." instance=ExtResource("4_x7kom")]
-position = Vector2(4642, 490)
+position = Vector2(4626, 490)
 scale = Vector2(2.12001, 0.25)
 
 [node name="Wall6" parent="." instance=ExtResource("4_x7kom")]
