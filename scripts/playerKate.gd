@@ -59,7 +59,7 @@ func _process(delta: float) -> void:
 	if playerstate != "jump":# || $AnimatedSprite2D.frame <= 2:
 		if prepareJump:
 			playerstate = "jump"
-		elif abs(velocity.x) < 0.1 and velocity.y == 0:
+		elif abs(velocity.x) < 0.2 and abs(velocity.y) < 0.2:
 			playerstate = "idle"
 		elif is_on_floor_custom:
 			playerstate = "walk"
@@ -86,7 +86,7 @@ func _process(delta: float) -> void:
 		if(!(velocity.y * downDir > 0 && velocityTemp.y * downDir < 0)):
 			velocity = velocityTemp;
 		else:
-			#velocity.y = 0;
+			velocity.y = 0;
 			is_on_floor_custom = true;
 			
 	# replace move and slide so I can handle the collisions manually and add bouncing
