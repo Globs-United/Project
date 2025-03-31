@@ -23,7 +23,9 @@ func _process(delta: float) -> void:
 		newY = 350;
 		newS = 1;
 	
-	var newX = min(max(get_node("../Player").position.x, screen_size.x * newY / 700), get_node("../FinishLine").position.x + get_node("../FinishLine").scale.x * 1020 - screen_size.x * newY / 700);
+	var newX = max(get_node("../Player").position.x, screen_size.x * newY / 700)
+	if get_node("../FinishLine"):
+		newX = min(newX, get_node("../FinishLine").position.x + get_node("../FinishLine").scale.x * 1020 - screen_size.x * newY / 700);
 	
 	position.x = position.x + 0.1 * (newX - position.x);
 	position.y = position.y + 0.1 * (newY - position.y);
