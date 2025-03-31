@@ -18,7 +18,7 @@
 
 [node name="Player" parent="." instance=ExtResource("1_aq45b")]
 z_index = 2
-position = Vector2(243, 216)
+position = Vector2(2422, 88)
 scale = Vector2(0.4, 0.4)
 
 [node name="Pit" parent="." instance=ExtResource("2_jukch")]
@@ -79,7 +79,7 @@ position = Vector2(4156, 270)
 scale = Vector2(0.2, 0.2)
 
 [node name="Checkpoint11" parent="." instance=ExtResource("8_vcnes")]
-position = Vector2(3787, 78)
+position = Vector2(3787, 89)
 scale = Vector2(0.2, 0.2)
 Yworld = true
 
@@ -108,15 +108,15 @@ position = Vector2(975, 297)
 scale = Vector2(0.07, 0.07)
 
 [node name="Fire9" parent="." instance=ExtResource("8_ux455")]
-position = Vector2(1376, 297)
+position = Vector2(1376, 209)
 scale = Vector2(0.07, 0.07)
 
 [node name="Fire10" parent="." instance=ExtResource("8_ux455")]
-position = Vector2(1417, 297)
+position = Vector2(1417, 209)
 scale = Vector2(0.07, 0.07)
 
 [node name="Fire11" parent="." instance=ExtResource("8_ux455")]
-position = Vector2(1460, 297)
+position = Vector2(1460, 209)
 scale = Vector2(0.07, 0.07)
 
 [node name="Wall8" parent="." instance=ExtResource("3_vcnes")]
@@ -188,6 +188,11 @@ z_index = 1
 position = Vector2(2947, 196)
 scale = Vector2(2.12, 0.25)
 
+[node name="Wall32" parent="." instance=ExtResource("3_vcnes")]
+z_index = 1
+position = Vector2(1459, 252)
+scale = Vector2(2.12, 0.25)
+
 [node name="Wall20" parent="." instance=ExtResource("3_vcnes")]
 z_index = 1
 position = Vector2(3423, 445)
@@ -208,6 +213,16 @@ z_index = 1
 position = Vector2(2582, 184)
 scale = Vector2(1.08, 0.25)
 
+[node name="Wall34" parent="." instance=ExtResource("3_vcnes")]
+z_index = 1
+position = Vector2(1292, 192)
+scale = Vector2(1.08, 0.25)
+
+[node name="Wall35" parent="." instance=ExtResource("3_vcnes")]
+z_index = 1
+position = Vector2(1068, 247)
+scale = Vector2(1.08, 0.25)
+
 [node name="Wall16" parent="." instance=ExtResource("3_vcnes")]
 z_index = 1
 position = Vector2(3293, 186)
@@ -225,7 +240,7 @@ scale = Vector2(1.08, 0.25)
 
 [node name="Wall10" parent="." instance=ExtResource("3_vcnes")]
 z_index = 1
-position = Vector2(3190, 9)
+position = Vector2(3190, 20)
 scale = Vector2(13.688, 0.25)
 
 [node name="Wall27" parent="." instance=ExtResource("3_vcnes")]
@@ -239,11 +254,11 @@ position = Vector2(5190, 583)
 scale = Vector2(23.928, 0.25)
 
 [node name="Fire12" parent="." instance=ExtResource("8_ux455")]
-position = Vector2(1502, 297)
+position = Vector2(1502, 209)
 scale = Vector2(0.07, 0.07)
 
 [node name="Fire13" parent="." instance=ExtResource("8_ux455")]
-position = Vector2(1545, 297)
+position = Vector2(1545, 209)
 scale = Vector2(0.07, 0.07)
 
 [node name="Fire14" parent="." instance=ExtResource("8_ux455")]
@@ -267,17 +282,17 @@ position = Vector2(2857, 297)
 scale = Vector2(0.07, 0.07)
 
 [node name="Fire19" parent="." instance=ExtResource("8_ux455")]
-position = Vector2(3546, 53)
+position = Vector2(3546, 64)
 rotation = 3.14159
 scale = Vector2(0.07, 0.07)
 
 [node name="Fire20" parent="." instance=ExtResource("8_ux455")]
-position = Vector2(3588, 53)
+position = Vector2(3588, 64)
 rotation = 3.14159
 scale = Vector2(0.07, 0.07)
 
 [node name="Fire21" parent="." instance=ExtResource("8_ux455")]
-position = Vector2(3631, 53)
+position = Vector2(3631, 64)
 rotation = 3.14159
 scale = Vector2(0.07, 0.07)
 
@@ -431,12 +446,24 @@ scale = Vector2(0.25, 3.72)
 position = Vector2(3487, 741)
 scale = Vector2(0.25, 3.72)
 
+[node name="Wall30" parent="." instance=ExtResource("3_vcnes")]
+position = Vector2(1068, 422)
+scale = Vector2(0.25, 3.72)
+
+[node name="Wall31" parent="." instance=ExtResource("3_vcnes")]
+position = Vector2(1292, 382)
+scale = Vector2(0.25, 3.72)
+
+[node name="Wall33" parent="." instance=ExtResource("3_vcnes")]
+position = Vector2(1461, 430)
+scale = Vector2(0.25, 3.72)
+
 [node name="Wall23" parent="." instance=ExtResource("3_vcnes")]
 position = Vector2(3744, 631)
 scale = Vector2(0.25, 3.72)
 
 [node name="Wall24" parent="." instance=ExtResource("3_vcnes")]
-position = Vector2(4056, 176)
+position = Vector2(4056, 187)
 scale = Vector2(0.25, 3.72)
 
 [node name="Wall3" parent="." instance=ExtResource("3_vcnes")]
@@ -468,7 +495,7 @@ position = Vector2(6399, 350)
 scale = Vector2(5.58001, 0.25)
 
 [node name="Wall12" parent="." instance=ExtResource("3_vcnes")]
-position = Vector2(3945, 9)
+position = Vector2(3945, 20)
 scale = Vector2(2.05999, 0.25)
 moveDownY = 436
 
