@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://7g1pbhq3bkpw"]
+[gd_scene load_steps=10 format=3 uid="uid://7g1pbhq3bkpw"]
 
 [ext_resource type="PackedScene" uid="uid://dgwk5b1f52pic" path="res://object_scenes/pit.tscn" id="1_mym2s"]
 [ext_resource type="PackedScene" uid="uid://bqao8gba5f2ao" path="res://object_scenes/player.tscn" id="1_pb8n0"]
@@ -7,15 +7,13 @@
 [ext_resource type="PackedScene" uid="uid://dh8i38af1uaom" path="res://object_scenes/sign.tscn" id="5_pl6lj"]
 [ext_resource type="PackedScene" uid="uid://b7kig75wfp6de" path="res://object_scenes/background.tscn" id="6_lqghc"]
 [ext_resource type="Script" uid="uid://w8iguxe1l24l" path="res://scripts/camera_2d.gd" id="7_dn0ov"]
+[ext_resource type="PackedScene" uid="uid://gkkpg0gxwa8j" path="res://object_scenes/sound_player.tscn" id="8_j8ev8"]
+[ext_resource type="PackedScene" uid="uid://cqab7aomtcrlf" path="res://object_scenes/volume_control_menu.tscn" id="9_mirrb"]
 
 [node name="WinnerScreen" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_pb8n0")]
 position = Vector2(389, 213)
-
-[node name="Pit" parent="." instance=ExtResource("1_mym2s")]
-position = Vector2(-170, 350)
-scale = Vector2(1, 0.5)
 
 [node name="Wall" parent="." instance=ExtResource("2_ist6a")]
 position = Vector2(960, 350)
@@ -26,7 +24,7 @@ position = Vector2(3720, 350)
 scale = Vector2(10, 0.5)
 
 [node name="FinishLine" parent="." instance=ExtResource("4_bngp7")]
-position = Vector2(4200, 350)
+position = Vector2(4700, 350)
 scale = Vector2(0.5, 0.5)
 
 [node name="Sign" parent="." instance=ExtResource("5_pl6lj")]
@@ -42,5 +40,14 @@ zoom = Vector2(0.7, 0.7)
 script = ExtResource("7_dn0ov")
 
 [node name="Wall2" parent="." instance=ExtResource("2_ist6a")]
-position = Vector2(4100, 350)
+position = Vector2(4600, 350)
 scale = Vector2(5, 2)
+
+[node name="Wall4" parent="." instance=ExtResource("2_ist6a")]
+position = Vector2(-48, 350)
+scale = Vector2(1, 15)
+
+[node name="SoundPlayer" parent="." instance=ExtResource("8_j8ev8")]
+
+[node name="VolumeControlMenu" parent="." instance=ExtResource("9_mirrb")]
+tutorial = false
