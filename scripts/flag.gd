@@ -4,6 +4,11 @@ extends Area2D
 
 
 
+# Feature has been implemented in checkpoint.gd / checkpoint.tscn
+
+
+
+
 func _process(_delta: float) -> void:
 	if Yworld != $AnimatedSprite2D.flip_v:
 		Yworld = !Yworld

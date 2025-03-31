@@ -64,6 +64,7 @@ text = "Use the WASD keys to move."
 justification_flags = 160
 
 [node name="Panel2" type="Panel" parent="."]
+z_index = 100
 offset_left = -230.0
 offset_top = -44.0
 offset_right = 174.0

@@ -1,6 +1,7 @@
 extends Area2D
 
 @export var text = ""
+@export var Yworld = false
 
 var player_within = false
 var state = 0
@@ -10,6 +11,12 @@ func _ready():
 	$Panel/RichTextLabel.push_font_size(50)
 	$Panel2/RichTextLabel.push_font_size(50)
 	$Panel2.hide()
+	
+	if Yworld:
+		rotation = PI;
+		$SignSelf.play("signY");
+	else:
+		$SignSelf.play("sign");
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("interact") && player_within:

@@ -16,13 +16,14 @@ func _ready():
 
 func _process(delta: float) -> void:
 	screen_size = get_viewport_rect().size;
-	var newX = max(get_node("../Player").position.x, screen_size.x / 4);
-	var newY = position.y; #get_node("../Player").position.y;
+	var newY = 175 if smallScreen else 350; #get_node("../Player").position.y;
 	var newS = 2 if smallScreen else 1;
 	
 	if get_node("../Player").hasTraveled:
 		newY = 350;
 		newS = 1;
+	
+	var newX = min(max(get_node("../Player").position.x, screen_size.x * newY / 700), get_node("../FinishLine").position.x + get_node("../FinishLine").scale.x * 1020 - screen_size.x * newY / 700);
 	
 	position.x = position.x + 0.1 * (newX - position.x);
 	position.y = position.y + 0.1 * (newY - position.y);

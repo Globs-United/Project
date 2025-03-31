@@ -1,20 +1,104 @@
-[gd_scene load_steps=4 format=3 uid="uid://cs2y2xdm75fed"]
+[gd_scene load_steps=22 format=3 uid="uid://cs2y2xdm75fed"]
 
-[ext_resource type="Texture2D" uid="uid://3bpxaef7r5vt" path="res://icon.svg" id="1_luqgl"]
 [ext_resource type="Script" uid="uid://drb2s0tjalt6h" path="res://checkpoint.gd" id="1_r6hke"]
+[ext_resource type="Texture2D" uid="uid://hptvp1qjrjiu" path="res://sprites/Flag1.png" id="2_75ged"]
+[ext_resource type="Texture2D" uid="uid://caxdrcyfik5wm" path="res://sprites/Flag2.png" id="3_3rdue"]
+[ext_resource type="Texture2D" uid="uid://ciiq7xq61onnh" path="res://sprites/Flag3.png" id="4_esfse"]
+[ext_resource type="Texture2D" uid="uid://d1l83gudmuo0d" path="res://sprites/Flag4.png" id="5_nb7yf"]
+[ext_resource type="Texture2D" uid="uid://b1lxea0acldop" path="res://sprites/Flag5.png" id="6_fux8q"]
+[ext_resource type="Texture2D" uid="uid://upcajmrrid8c" path="res://sprites/Flag6.png" id="7_vvkua"]
+[ext_resource type="Texture2D" uid="uid://fvo2yk6n3kup" path="res://sprites/Flag7.png" id="8_vxp1h"]
+[ext_resource type="Texture2D" uid="uid://cgn16wmv34ys3" path="res://sprites/Flag8.png" id="9_52gur"]
+[ext_resource type="Texture2D" uid="uid://rhidh5kqyjva" path="res://sprites/Flag9.png" id="10_w6m6v"]
+[ext_resource type="Texture2D" uid="uid://kxgrgtow05e5" path="res://sprites/Flag1Y.png" id="11_sl4cu"]
+[ext_resource type="Texture2D" uid="uid://dyj52scbtvw6r" path="res://sprites/Flag2Y.png" id="12_bqg27"]
+[ext_resource type="Texture2D" uid="uid://cncdbiffgldmf" path="res://sprites/Flag3Y.png" id="13_yfg6k"]
+[ext_resource type="Texture2D" uid="uid://cyxknx1wjgnqw" path="res://sprites/Flag4Y.png" id="14_jqj1t"]
+[ext_resource type="Texture2D" uid="uid://he5mxwboejm1" path="res://sprites/Flag5Y.png" id="15_r5e8m"]
+[ext_resource type="Texture2D" uid="uid://by47sedf3cyls" path="res://sprites/Flag6Y.png" id="16_c7dlx"]
+[ext_resource type="Texture2D" uid="uid://6cffmifrld0d" path="res://sprites/Flag7Y.png" id="17_an16y"]
+[ext_resource type="Texture2D" uid="uid://dttcqth8s7ody" path="res://sprites/Flag8U.png" id="18_xg0wb"]
+[ext_resource type="Texture2D" uid="uid://tv680r6fgttl" path="res://sprites/Flag9Y.png" id="19_6dpqq"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_r6hke"]
-radius = 51.4198
+[sub_resource type="SpriteFrames" id="SpriteFrames_c84co"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_75ged")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_3rdue")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_esfse")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nb7yf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_fux8q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_vvkua")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_vxp1h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_52gur")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_w6m6v")
+}],
+"loop": true,
+"name": &"flag",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_sl4cu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_bqg27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_yfg6k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_jqj1t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_r5e8m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_c7dlx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_an16y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_xg0wb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_6dpqq")
+}],
+"loop": true,
+"name": &"flagY",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xcals"]
 
 [node name="Checkpoint" type="Area2D"]
 script = ExtResource("1_r6hke")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_r6hke")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-50, 0)
+sprite_frames = SubResource("SpriteFrames_c84co")
+animation = &"flag"
 
-[node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(1, 1)
-scale = Vector2(0.679688, 0.679688)
-texture = ExtResource("1_luqgl")
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+scale = Vector2(15, 28)
+shape = SubResource("RectangleShape2D_xcals")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

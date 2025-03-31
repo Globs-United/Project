@@ -1,14 +1,23 @@
 extends Area2D
 
-var player_within = false
-var state = 0
+@export var Yworld = false
 
-func state_display():
-	if state == 0:
-		0# Display unchecked
-	if state == 1:
-		0# Display checked
-		
+var player_within = false
+
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
-		get_tree().call_group("player", "_on_check_point", position)
+		get_tree().call_group("player", "_on_check_point", position, Yworld)
+
+func _process(_delta: float) -> void:
+	if Yworld != $AnimatedSprite2D.flip_v:
+		Yworld = !Yworld
+		change_world()
+	if Yworld:
+		$AnimatedSprite2D.play("flagY")
+	else:
+		$AnimatedSprite2D.play("flag")
+
+
+func change_world():
+	Yworld = !Yworld
+	$AnimatedSprite2D.flip_v = !($AnimatedSprite2D.flip_v)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cill11k6nch8o"]
+[gd_scene load_steps=12 format=3 uid="uid://cill11k6nch8o"]
 
 [ext_resource type="PackedScene" uid="uid://bqao8gba5f2ao" path="res://object_scenes/player.tscn" id="1_aq45b"]
 [ext_resource type="PackedScene" uid="uid://dgwk5b1f52pic" path="res://object_scenes/pit.tscn" id="2_jukch"]
@@ -10,12 +10,13 @@
 [ext_resource type="PackedScene" uid="uid://wsjajdqhncat" path="res://object_scenes/fire.tscn" id="8_ux455"]
 [ext_resource type="PackedScene" uid="uid://cs2y2xdm75fed" path="res://checkpoint.tscn" id="8_vcnes"]
 [ext_resource type="PackedScene" uid="uid://dh8i38af1uaom" path="res://object_scenes/sign.tscn" id="9_jukch"]
+[ext_resource type="PackedScene" uid="uid://xmbjavg0javs" path="res://object_scenes/finish_line.tscn" id="11_3pm5q"]
 
 [node name="Lvl 2" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_aq45b")]
 z_index = 3
-position = Vector2(4725, 298)
+position = Vector2(209, 175)
 scale = Vector2(0.4, 0.4)
 
 [node name="Pit" parent="." instance=ExtResource("2_jukch")]
@@ -30,8 +31,8 @@ scale = Vector2(50, 0.5)
 
 [node name="Wall21" parent="." instance=ExtResource("3_vcnes")]
 z_index = 1
-position = Vector2(5400, 350)
-scale = Vector2(10, 0.5)
+position = Vector2(5677, 350)
+scale = Vector2(15.8, 0.5)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, 175)
@@ -46,12 +47,24 @@ position = Vector2(129, -289)
 scale = Vector2(0.16, 0.16)
 
 [node name="Spikes" parent="." instance=ExtResource("7_t5h3c")]
-position = Vector2(2344, 305)
+position = Vector2(2344, 301)
+rotation = 1.5708
+scale = Vector2(0.2, 0.2)
+
+[node name="Spikes23" parent="." instance=ExtResource("7_t5h3c")]
+visible = false
+position = Vector2(2336, 320)
+rotation = 1.5708
+scale = Vector2(0.2, 0.2)
+
+[node name="Spikes24" parent="." instance=ExtResource("7_t5h3c")]
+visible = false
+position = Vector2(2555, 320)
 rotation = 1.5708
 scale = Vector2(0.2, 0.2)
 
 [node name="Spikes2" parent="." instance=ExtResource("7_t5h3c")]
-position = Vector2(2545, 305)
+position = Vector2(2545, 301)
 rotation = 1.5708
 scale = Vector2(0.2, 0.2)
 
@@ -61,12 +74,12 @@ rotation = -1.5708
 scale = Vector2(0.2, 0.2)
 
 [node name="Spikes11" parent="." instance=ExtResource("7_t5h3c")]
-position = Vector2(4304, 188)
+position = Vector2(4304, 175)
 rotation = -1.5708
 scale = Vector2(0.2, 0.2)
 
 [node name="Spikes12" parent="." instance=ExtResource("7_t5h3c")]
-position = Vector2(4087, 78)
+position = Vector2(4087, 44)
 rotation = -1.5708
 scale = Vector2(0.2, 0.2)
 
@@ -75,25 +88,26 @@ position = Vector2(4087, 275)
 rotation = -1.5708
 scale = Vector2(0.2, 0.2)
 
-[node name="Checkpoint" parent="." instance=ExtResource("8_vcnes")]
-position = Vector2(3857, 290)
-scale = Vector2(0.5, 0.5)
-
-[node name="Checkpoint4" parent="." instance=ExtResource("8_vcnes")]
-position = Vector2(3857, 290)
-scale = Vector2(0.5, 0.5)
-
 [node name="Checkpoint5" parent="." instance=ExtResource("8_vcnes")]
-position = Vector2(4621, 286)
-scale = Vector2(0.5, 0.5)
+position = Vector2(4619, 271)
+scale = Vector2(0.2, 0.2)
 
-[node name="Checkpoint2" parent="." instance=ExtResource("8_vcnes")]
-position = Vector2(2879, 296)
-scale = Vector2(0.5, 0.5)
+[node name="Checkpoint7" parent="." instance=ExtResource("8_vcnes")]
+position = Vector2(3852, 271)
+scale = Vector2(0.2, 0.2)
 
-[node name="Checkpoint3" parent="." instance=ExtResource("8_vcnes")]
-position = Vector2(1413, 41)
-scale = Vector2(0.5, 0.5)
+[node name="Checkpoint8" parent="." instance=ExtResource("8_vcnes")]
+position = Vector2(2773, 272)
+scale = Vector2(0.2, 0.2)
+
+[node name="Checkpoint9" parent="." instance=ExtResource("8_vcnes")]
+position = Vector2(1306, 148)
+scale = Vector2(0.2, 0.2)
+
+[node name="Checkpoint6" parent="." instance=ExtResource("8_vcnes")]
+position = Vector2(4703, 598)
+scale = Vector2(0.2, 0.2)
+Yworld = true
 
 [node name="Spikes6" parent="." instance=ExtResource("7_t5h3c")]
 position = Vector2(3437, 302)
@@ -105,8 +119,14 @@ position = Vector2(3635, 303)
 rotation = 1.5708
 scale = Vector2(0.2, 0.2)
 
+[node name="Spikes25" parent="." instance=ExtResource("7_t5h3c")]
+visible = false
+position = Vector2(3644, 320)
+rotation = 1.5708
+scale = Vector2(0.2, 0.2)
+
 [node name="Spikes17" parent="." instance=ExtResource("7_t5h3c")]
-position = Vector2(4506, 649)
+position = Vector2(4506, 691)
 rotation = 1.5708
 scale = Vector2(0.2, 0.2)
 
@@ -119,7 +139,7 @@ position = Vector2(3963, 153)
 scale = Vector2(0.2, 0.2)
 
 [node name="Spikes10" parent="." instance=ExtResource("7_t5h3c")]
-position = Vector2(4382, 264)
+position = Vector2(4382, 255)
 scale = Vector2(0.2, 0.2)
 
 [node name="Spikes13" parent="." instance=ExtResource("7_t5h3c")]
@@ -136,12 +156,12 @@ rotation = 3.14159
 scale = Vector2(0.2, 0.2)
 
 [node name="Spikes15" parent="." instance=ExtResource("7_t5h3c")]
-position = Vector2(4287, 434)
+position = Vector2(4287, 476)
 rotation = 3.14159
 scale = Vector2(0.2, 0.2)
 
 [node name="Spikes16" parent="." instance=ExtResource("7_t5h3c")]
-position = Vector2(4350, 587)
+position = Vector2(4350, 629)
 rotation = 2.35619
 scale = Vector2(0.2, 0.2)
 
@@ -160,7 +180,7 @@ scale = Vector2(0.15, 0.15)
 text = "Don't touch the spikes!"
 
 [node name="Sign4" parent="." instance=ExtResource("9_jukch")]
-position = Vector2(1316, 46)
+position = Vector2(1423, 177)
 scale = Vector2(0.15, 0.15)
 text = "This is a checkpoint!"
 
@@ -173,6 +193,13 @@ text = "The backs are safe"
 position = Vector2(5026, 297)
 scale = Vector2(0.15, 0.15)
 text = "Go in the hole."
+
+[node name="Sign6" parent="." instance=ExtResource("9_jukch")]
+position = Vector2(5981, 404)
+rotation = 3.14159
+scale = Vector2(0.15, 0.15)
+text = "The end?"
+Yworld = true
 
 [node name="Wall2" parent="." instance=ExtResource("3_vcnes")]
 position = Vector2(388, 298)
@@ -203,7 +230,7 @@ position = Vector2(2858, 71)
 scale = Vector2(0.25, 2.68)
 
 [node name="Wall22" parent="." instance=ExtResource("3_vcnes")]
-position = Vector2(4932, 480)
+position = Vector2(4932, 457)
 scale = Vector2(0.25, 2.68)
 
 [node name="Wall5" parent="." instance=ExtResource("3_vcnes")]
@@ -231,30 +258,30 @@ position = Vector2(4015, 239)
 scale = Vector2(0.559995, 0.25)
 
 [node name="Spikes18" parent="." instance=ExtResource("7_t5h3c")]
-position = Vector2(5658, 546)
+position = Vector2(5662, 556)
 rotation = -1.5708
 scale = Vector2(-0.2, 0.2)
 
 [node name="Spikes19" parent="." instance=ExtResource("7_t5h3c")]
-position = Vector2(5428, 441)
+position = Vector2(5428, 446)
 rotation = -1.5708
 scale = Vector2(-0.2, 0.2)
 
 [node name="Spikes20" parent="." instance=ExtResource("7_t5h3c")]
-position = Vector2(5429, 649)
+position = Vector2(5429, 681)
 rotation = -1.5708
 scale = Vector2(-0.2, 0.2)
 
 [node name="Spikes21" parent="." instance=ExtResource("7_t5h3c")]
-position = Vector2(5305, 563)
+position = Vector2(5305, 568)
 scale = Vector2(0.2, 0.2)
 
 [node name="Spikes22" parent="." instance=ExtResource("7_t5h3c")]
-position = Vector2(5743, 469)
+position = Vector2(5740, 474)
 scale = Vector2(0.2, 0.2)
 
 [node name="Wall25" parent="." instance=ExtResource("3_vcnes")]
-position = Vector2(5356, 478)
+position = Vector2(5356, 494)
 scale = Vector2(0.559995, 0.25)
 
 [node name="Wall17" parent="." instance=ExtResource("3_vcnes")]
@@ -266,12 +293,16 @@ position = Vector2(3181, 265)
 scale = Vector2(1.04, 0.25)
 
 [node name="Wall24" parent="." instance=ExtResource("3_vcnes")]
-position = Vector2(4890, 535)
-scale = Vector2(1.04, 0.25)
+position = Vector2(4697, 547)
+scale = Vector2(2.15999, 0.25)
 
 [node name="Wall23" parent="." instance=ExtResource("3_vcnes")]
-position = Vector2(4739, 449)
-scale = Vector2(3.96, 0.25)
+position = Vector2(4626, 432)
+scale = Vector2(2.44, 0.25)
+
+[node name="Wall26" parent="." instance=ExtResource("3_vcnes")]
+position = Vector2(4642, 490)
+scale = Vector2(2.12001, 0.25)
 
 [node name="Wall6" parent="." instance=ExtResource("3_vcnes")]
 position = Vector2(1371, 87)
@@ -288,3 +319,8 @@ scale = Vector2(0.900002, 0.25)
 [node name="Wall12" parent="." instance=ExtResource("3_vcnes")]
 position = Vector2(1110, 154)
 scale = Vector2(0.900002, 0.25)
+
+[node name="FinishLine" parent="." instance=ExtResource("11_3pm5q")]
+z_index = 1
+position = Vector2(6078, 350)
+scale = Vector2(0.35, 0.35)

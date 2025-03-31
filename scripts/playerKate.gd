@@ -2,11 +2,12 @@ extends CharacterBody2D
 
 const SPEED = 250.0;
 const FRICTION = 30.0;
-const JUMP_VELOCITY = -300.0;
+const JUMP_VELOCITY = -340.0;
 const TERMINAL_VELOCITY = 500
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity");
 
 var initialPosition;
+var initialWorld;
 @export var initialHealth = 1;
 
 var is_on_floor_custom = false;
@@ -38,6 +39,7 @@ var hasTraveled = false;
 
 func _ready() -> void:
 	initialPosition = position;
+	initialWorld = Yworld;
 
 func _process(delta: float) -> void:
 	if Yworld != $AnimatedSprite2D.flip_v:
@@ -193,8 +195,9 @@ func _on_being_hit():
 		can_be_hit = false
 		$iFrames.start()
 
-func _on_check_point(newPos):
+func _on_check_point(newPos, newY):
 	initialPosition = newPos;
+	initialWorld = newY;
 
 
 
@@ -223,4 +226,6 @@ func _on_post_death_timeout() -> void:
 	death_animation_over = false;
 	velocity = Vector2(0, 0);
 	health = initialHealth;
-	hasTraveled = false;
+	if Yworld != initialWorld:
+		change_world();
+		hasTraveled = false;
