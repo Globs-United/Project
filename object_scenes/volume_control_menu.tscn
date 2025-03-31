@@ -1,0 +1,56 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqab7aomtcrlf"]
+
+[ext_resource type="Script" uid="uid://c14iaxjq8phpe" path="res://scripts/volume_control_menu.gd" id="1_jn83n"]
+
+[sub_resource type="Theme" id="Theme_jn83n"]
+default_font_size = 50
+
+[node name="VolumeControlMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jn83n")
+metadata/_edit_group_ = true
+
+[node name="Music" type="VSlider" parent="."]
+layout_mode = 0
+offset_left = 401.0
+offset_top = -75.0
+offset_right = 476.0
+offset_bottom = 275.0
+tooltip_text = "Music Volume"
+min_value = -20.0
+max_value = 20.0
+step = 0.1
+value = -10.0
+tick_count = 5
+ticks_on_borders = true
+
+[node name="Noise" type="VSlider" parent="."]
+layout_mode = 0
+offset_left = 476.0
+offset_top = -75.0
+offset_right = 551.0
+offset_bottom = 275.0
+tooltip_text = "Noise Volume"
+min_value = -20.0
+max_value = 20.0
+step = 0.1
+value = -10.0
+tick_count = 5
+ticks_on_borders = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 99.0
+offset_top = 276.0
+offset_right = 574.0
+offset_bottom = 350.0
+theme = SubResource("Theme_jn83n")
+text = "ESC to toggle menu"
+
+[connection signal="value_changed" from="Music" to="." method="_on_music_value_changed"]
+[connection signal="value_changed" from="Noise" to="." method="_on_noise_value_changed"]
