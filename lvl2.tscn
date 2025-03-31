@@ -18,7 +18,7 @@
 
 [node name="Player" parent="." instance=ExtResource("1_aq45b")]
 z_index = 2
-position = Vector2(3763, 300)
+position = Vector2(254, 224)
 scale = Vector2(0.4, 0.4)
 
 [node name="Pit" parent="." instance=ExtResource("2_jukch")]
@@ -161,7 +161,7 @@ scale = Vector2(0.2, 0.2)
 skew = -4.31538e-05
 
 [node name="Spikes8" parent="." instance=ExtResource("7_t5h3c")]
-position = Vector2(6122, 231)
+position = Vector2(6122, 469)
 scale = Vector2(0.2, 0.2)
 skew = -4.31538e-05
 
@@ -291,11 +291,6 @@ scale = Vector2(0.07, 0.07)
 
 [node name="Fire18" parent="." instance=ExtResource("8_ux455")]
 position = Vector2(2857, 297)
-scale = Vector2(0.07, 0.07)
-
-[node name="Fire19" parent="." instance=ExtResource("8_ux455")]
-position = Vector2(3522, 64)
-rotation = 3.14159
 scale = Vector2(0.07, 0.07)
 
 [node name="Fire20" parent="." instance=ExtResource("8_ux455")]

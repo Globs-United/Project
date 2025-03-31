@@ -102,7 +102,7 @@ position = Vector2(1306, 148)
 scale = Vector2(0.2, 0.2)
 
 [node name="Checkpoint6" parent="." instance=ExtResource("8_lpail")]
-position = Vector2(4703, 598)
+position = Vector2(4703, 616)
 scale = Vector2(0.2, 0.2)
 Yworld = true
 
