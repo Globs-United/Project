@@ -1,9 +1,9 @@
 extends CharacterBody2D
 
-const SPEED = 300.0;
+const SPEED = 250.0;
 const FRICTION = 30.0;
 const JUMP_VELOCITY = -300.0;
-const TERMINAL_VELOCITY = 1000
+const TERMINAL_VELOCITY = 500
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity");
 
 var is_on_floor_custom = false;
@@ -50,42 +50,6 @@ func _process(delta: float) -> void:
 		#double checks if jumping
 		if -1*sign(gravity) == sign(velocity.y):
 			playerstate = "jump"
-	if is_on_floor_custom:
-		jumpTime = jumpTimeMax;
-	else:
-		jumpTime -= delta * 1e3;
-	
-	# Handle jump.
-	
-	# Add jump preparation time before jump to account for that one animation frame
-	# where the blob tries to jump
-	# The blob accelerates upwards slowly during this wait time before immediately going up
-	# Can be easily commented out and restored to old version
-	if Input.is_action_just_pressed("jump") and jumpTime > 0:
-		# Comment out below line to undo jump preparation!
-		jumpTime = 0;
-		prepareJump = true;
-		$AnimatedSprite2D.frame = 0;
-	else:
-		if prepareJump:
-			jumpTime = 0;
-			if $AnimatedSprite2D.frame >= 1:
-				velocity.y = jump_velocity()
-				prepareJump = false;
-			else:
-				velocity.y += jump_velocity() * 0.12
-	#"""# End jump preparation toggle
-	
-		
-	# dynamic jump, only letting occur once due to spamming == flying
-	# Temporarily removed because it wasn't working
-	#Kate: I see why it didn't work, jump_check wasn't where button is pressed as well
-	"""
-	if Input.is_action_just_released("jump") and velocity.y < 0:
-		if not jump_check:
-			velocity.y = JUMP_VELOCITY / 2
-		jump_check = true
-	"""
 		
 	#I moved the horizontal flip so it applies on all nodes, not just walking
 	#??? their relative x positions==0 means that only the visible sprite needs to flip
@@ -105,17 +69,13 @@ func _process(delta: float) -> void:
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("moveLeft", "moveRight")
 	
+	velocity.x *= 0.8
 	if direction:
-		velocity.x = direction * SPEED
-	else:
-		# Add sign of self to prevent getting to 0
-		# prevents animation sprite direction from switching after stopping
-		velocity.x = move_toward(velocity.x, 0, FRICTION) + 0.01 * sign(velocity.x)
+		velocity.x += 0.35 * direction * SPEED
+		
 	if abs(velocity.y) > TERMINAL_VELOCITY:
 		velocity.y = TERMINAL_VELOCITY*sign(velocity.y)
 	playeranim(delta);
-	# replace move and slide so I can handle the collisions manually and add bouncing
-	position += velocity * delta;
 	
 	# Handle collisions
 	var collision_info = move_and_collide(velocity * delta);
@@ -126,8 +86,24 @@ func _process(delta: float) -> void:
 		if(!(velocity.y * downDir > 0 && velocityTemp.y * downDir < 0)):
 			velocity = velocityTemp;
 		else:
-			velocity.y = 0;
+			#velocity.y = 0;
 			is_on_floor_custom = true;
+			
+	# replace move and slide so I can handle the collisions manually and add bouncing
+	
+	if is_on_floor_custom:
+		jumpTime = jumpTimeMax;
+	else:
+		jumpTime -= delta * 1e3;
+	
+	if Input.is_action_just_pressed("jump") and jumpTime > 0:
+		# Comment out below line to undo jump preparation!
+		jumpTime = 0;
+		velocity.y = jump_velocity()
+		prepareJump = false;
+		playerstate = "jump"
+	
+	position += velocity * delta;
 
 
 
